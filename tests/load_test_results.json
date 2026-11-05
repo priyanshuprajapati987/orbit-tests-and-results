@@ -1,0 +1,320 @@
+{
+  "timestamp": "2026-09-18T16:56:14.321207",
+  "grade": "A",
+  "results": [
+    {
+      "label": "GET /api/health",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 120.2,
+      "p50_ms": 113.9,
+      "p95_ms": 151.2,
+      "p99_ms": 153.3,
+      "min_ms": 105.9,
+      "max_ms": 153.3,
+      "statuses": {
+        "200": 50
+      }
+    },
+    {
+      "label": "GET /api/health/dashboard",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 26.4,
+      "p50_ms": 27.5,
+      "p95_ms": 36.8,
+      "p99_ms": 39.5,
+      "min_ms": 8.5,
+      "max_ms": 39.5,
+      "statuses": {
+        "429": 32,
+        "200": 18
+      }
+    },
+    {
+      "label": "GET /api/providers/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 2329.8,
+      "p50_ms": 2325.9,
+      "p95_ms": 2358.7,
+      "p99_ms": 2365.3,
+      "min_ms": 2300.0,
+      "max_ms": 2365.3,
+      "statuses": {
+        "200": 50
+      }
+    },
+    {
+      "label": "GET /api/agents/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 33.6,
+      "p50_ms": 34.7,
+      "p95_ms": 46.6,
+      "p99_ms": 48.6,
+      "min_ms": 9.5,
+      "max_ms": 48.6,
+      "statuses": {
+        "200": 50
+      }
+    },
+    {
+      "label": "GET /api/boot/latest",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 125.6,
+      "p50_ms": 128.1,
+      "p95_ms": 175.6,
+      "p99_ms": 177.4,
+      "min_ms": 49.2,
+      "max_ms": 177.4,
+      "statuses": {
+        "200": 50
+      }
+    },
+    {
+      "label": "GET /api/context/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 49.2,
+      "p50_ms": 36.1,
+      "p95_ms": 84.8,
+      "p99_ms": 85.6,
+      "min_ms": 8.1,
+      "max_ms": 85.6,
+      "statuses": {
+        "429": 28,
+        "200": 22
+      }
+    },
+    {
+      "label": "GET /api/benchmark/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 21.2,
+      "p50_ms": 22.2,
+      "p95_ms": 32.6,
+      "p99_ms": 34.1,
+      "min_ms": 4.1,
+      "max_ms": 34.1,
+      "statuses": {
+        "429": 44,
+        "200": 6
+      }
+    },
+    {
+      "label": "GET /api/security-guard/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 34.8,
+      "p50_ms": 37.4,
+      "p95_ms": 60.6,
+      "p99_ms": 61.6,
+      "min_ms": 5.0,
+      "max_ms": 61.6,
+      "statuses": {
+        "429": 44,
+        "200": 6
+      }
+    },
+    {
+      "label": "GET /api/image-gen/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 23.1,
+      "p50_ms": 24.9,
+      "p95_ms": 35.9,
+      "p99_ms": 41.6,
+      "min_ms": 4.8,
+      "max_ms": 41.6,
+      "statuses": {
+        "429": 45,
+        "200": 5
+      }
+    },
+    {
+      "label": "GET /api/telegram/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 18.9,
+      "p50_ms": 18.4,
+      "p95_ms": 30.7,
+      "p99_ms": 32.4,
+      "min_ms": 3.3,
+      "max_ms": 32.4,
+      "statuses": {
+        "429": 46,
+        "200": 4
+      }
+    },
+    {
+      "label": "GET /api/discord/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 20.6,
+      "p50_ms": 21.8,
+      "p95_ms": 31.2,
+      "p99_ms": 34.8,
+      "min_ms": 4.0,
+      "max_ms": 34.8,
+      "statuses": {
+        "200": 5,
+        "429": 45
+      }
+    },
+    {
+      "label": "GET /api/rag/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 25.3,
+      "p50_ms": 22.0,
+      "p95_ms": 34.7,
+      "p99_ms": 223.5,
+      "min_ms": 3.3,
+      "max_ms": 223.5,
+      "statuses": {
+        "429": 46,
+        "200": 4
+      }
+    },
+    {
+      "label": "GET /api/marketplace/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 20.9,
+      "p50_ms": 22.4,
+      "p95_ms": 30.7,
+      "p99_ms": 31.7,
+      "min_ms": 5.8,
+      "max_ms": 31.7,
+      "statuses": {
+        "429": 36,
+        "200": 14
+      }
+    },
+    {
+      "label": "GET /api/scheduler/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 19.3,
+      "p50_ms": 19.6,
+      "p95_ms": 30.2,
+      "p99_ms": 31.4,
+      "min_ms": 5.2,
+      "max_ms": 31.4,
+      "statuses": {
+        "429": 46,
+        "404": 4
+      }
+    },
+    {
+      "label": "GET /api/voice-screen/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 17.7,
+      "p50_ms": 18.4,
+      "p95_ms": 29.1,
+      "p99_ms": 31.0,
+      "min_ms": 3.6,
+      "max_ms": 31.0,
+      "statuses": {
+        "429": 45,
+        "200": 5
+      }
+    },
+    {
+      "label": "GET /api/a2a/stats",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 25.6,
+      "p50_ms": 28.4,
+      "p95_ms": 37.8,
+      "p99_ms": 38.3,
+      "min_ms": 3.5,
+      "max_ms": 38.3,
+      "statuses": {
+        "429": 45,
+        "200": 5
+      }
+    },
+    {
+      "label": "GET /api/mcp/status",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 17.7,
+      "p50_ms": 20.0,
+      "p95_ms": 29.0,
+      "p99_ms": 30.0,
+      "min_ms": 3.2,
+      "max_ms": 30.0,
+      "statuses": {
+        "429": 46,
+        "200": 4
+      }
+    },
+    {
+      "label": "POST /api/chat",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 2065.4,
+      "p50_ms": 78.0,
+      "p95_ms": 6429.5,
+      "p99_ms": 12339.4,
+      "min_ms": 6.0,
+      "max_ms": 12339.4,
+      "statuses": {
+        "429": 35,
+        "200": 15
+      }
+    },
+    {
+      "label": "POST /api/rag/query",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 23.3,
+      "p50_ms": 25.4,
+      "p95_ms": 36.6,
+      "p99_ms": 38.0,
+      "min_ms": 4.2,
+      "max_ms": 38.0,
+      "statuses": {
+        "200": 50
+      }
+    },
+    {
+      "label": "POST /api/marketplace/browse",
+      "requests": 50,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 43.1,
+      "p50_ms": 44.7,
+      "p95_ms": 74.8,
+      "p99_ms": 79.5,
+      "min_ms": 4.8,
+      "max_ms": 79.5,
+      "statuses": {
+        "405": 50
+      }
+    }
+  ]
+}

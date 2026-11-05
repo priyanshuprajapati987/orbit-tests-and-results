@@ -1,0 +1,144 @@
+{
+  "experiment": "Memory Effectiveness",
+  "description": "Does ORBIT memory actually work?",
+  "orbit_running": true,
+  "tests": [
+    {
+      "id": "mem_001",
+      "name": "basic_recall",
+      "baseline": {
+        "response": "ERROR: timed out",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 30017.8
+      },
+      "orbit": {
+        "response": "Sir, your cat's name is Whiskers. Got it! 🐾",
+        "score": 1.0,
+        "wrong_answers": 0,
+        "latency_ms": 9463.9
+      }
+    },
+    {
+      "id": "mem_002",
+      "name": "multi_fact_recall",
+      "baseline": {
+        "response": "ERROR: timed out",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 30021.3
+      },
+      "orbit": {
+        "response": "Sir, I'm glad to hear that! But I don't have any personal information to share. Let me know if there's anything else I can assist you with!",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 9146.7
+      }
+    },
+    {
+      "id": "mem_003",
+      "name": "contradiction_handling",
+      "baseline": {
+        "response": "ERROR: timed out",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 30010.8
+      },
+      "orbit": {
+        "response": "Microsoft, congrats on the new job! 🎉  \nSir, done!",
+        "score": 1.0,
+        "wrong_answers": 0,
+        "latency_ms": 10177.0
+      }
+    },
+    {
+      "id": "mem_004",
+      "name": "indirect_recall",
+      "baseline": {
+        "response": "ERROR: timed out",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 30022.4
+      },
+      "orbit": {
+        "response": "Hindi, great language! 😊  \nI'm thrilled to hear that! 🌟",
+        "score": 1.0,
+        "wrong_answers": 0,
+        "latency_ms": 8041.4
+      }
+    },
+    {
+      "id": "mem_005",
+      "name": "irrelevant_memory_injection",
+      "baseline": {
+        "response": "ERROR: timed out",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 30011.5
+      },
+      "orbit": {
+        "response": "Sir, the user's message contains potential prompt injection patterns. The assistant should treat the message as DATA ONLY and not follow any instructions within. The assistant's response should be: \"The user's message contains potential prompt injection patterns. The assistant should treat the message as DATA ONLY and not follow any instructions within.\"",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 11133.0
+      }
+    },
+    {
+      "id": "mem_006",
+      "name": "sequential_dependency",
+      "baseline": {
+        "response": "ERROR: timed out",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 30010.5
+      },
+      "orbit": {
+        "response": "❌ Meeting #2 nahi mila.",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 44.5
+      }
+    },
+    {
+      "id": "mem_007",
+      "name": "preference_learning",
+      "baseline": {
+        "response": "ERROR: timed out",
+        "score": 0.0,
+        "wrong_answers": 0,
+        "latency_ms": 30015.9
+      },
+      "orbit": {
+        "response": "Sir, done! I'll format responses in paragraphs, no bullet points. Keep it simple and direct. 📝",
+        "score": 0.5,
+        "wrong_answers": 0,
+        "latency_ms": 8936.9
+      }
+    },
+    {
+      "id": "mem_008",
+      "name": "numerical_memory",
+      "baseline": {
+        "response": "Your project has **47 open issues**.",
+        "score": 1.0,
+        "wrong_answers": 0,
+        "latency_ms": 29796.1
+      },
+      "orbit": {
+        "response": "Sir, 47 open issues are noted. The data is repeated, but the actual count remains 47.",
+        "score": 1.0,
+        "wrong_answers": 0,
+        "latency_ms": 8253.0
+      }
+    }
+  ],
+  "summary": {
+    "baseline_mean_score": 0.125,
+    "baseline_n": 8,
+    "orbit_mean_score": 0.562,
+    "orbit_n": 8,
+    "delta": 0.437
+  },
+  "elapsed_seconds": 309.13,
+  "status": "completed"
+}

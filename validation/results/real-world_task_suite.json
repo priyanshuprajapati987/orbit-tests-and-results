@@ -1,0 +1,241 @@
+{
+  "experiment": "Real-World Task Suite",
+  "description": "Test with realistic multi-step tasks",
+  "orbit_running": true,
+  "tasks": [
+    {
+      "id": "rw_001",
+      "category": "file_management",
+      "direct": {
+        "score": 0,
+        "latency_ms": 10159.4,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 0.5,
+        "latency_ms": 44.6,
+        "response_preview": "Error: ORBIT ye command directly run nahi kar sakta. Koi specific tool batao (clipboard, process, file, etc).",
+        "agent": "TAS"
+      }
+    },
+    {
+      "id": "rw_002",
+      "category": "code_generation",
+      "direct": {
+        "score": 0,
+        "latency_ms": 4791.4,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 0.5,
+        "latency_ms": 9074.3,
+        "response_preview": "Sure! Here's a clean, efficient Python implementation of a Stack with the required methods:\n\n```python\nclass Stack:\n    def __init__(self):\n        self._elements = []\n\n    def push(self, element):\n  ",
+        "agent": "TAS"
+      }
+    },
+    {
+      "id": "rw_003",
+      "category": "debugging",
+      "direct": {
+        "score": 0.0,
+        "latency_ms": 5010.6,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 0.75,
+        "latency_ms": 694.7,
+        "response_preview": "Convert the string to an integer before adding. Use int() function.",
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "rw_004",
+      "category": "research",
+      "direct": {
+        "score": 0.0,
+        "latency_ms": 4859.0,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 0.6666666666666666,
+        "latency_ms": 768.6,
+        "response_preview": "PostgreSQL is a relational database suitable for complex queries and structured data, while MongoDB is a NoSQL database ideal for unstructured data and scalability. For a social media app, MongoDB mig",
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "rw_005",
+      "category": "system_info",
+      "direct": {
+        "score": 0.6666666666666666,
+        "latency_ms": 4914.2,
+        "response_preview": "To determine your operating system and the amount of RAM your system has, follow these steps:\n\n---\n\n### **1. Check Your Operating System**\n- **Windows**:\n  - Press `Win + R`, type `cmd`, and press Ent"
+      },
+      "orbit": {
+        "score": 0.6666666666666666,
+        "latency_ms": 1235.9,
+        "response_preview": "The approach is to check the system's operating system and memory using built-in commands or tools. The key calculation involves running `cat /etc/os-release` to determine the OS and `free -m | grep \"",
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "rw_006",
+      "category": "creative",
+      "direct": {
+        "score": 0.0,
+        "latency_ms": 4809.3,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 0.3333333333333333,
+        "latency_ms": 545.9,
+        "response_preview": "AI evolves with purpose,  \nneural networks create wonder,  \nfuture shines bright.",
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "rw_007",
+      "category": "planning",
+      "direct": {
+        "score": 0.0,
+        "latency_ms": 5026.7,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 919.5,
+        "response_preview": "A 3-month study plan for machine learning includes: 1) foundational courses (linear algebra, calculus, programming), 2) data science basics (data manipulation, visualization), 3) machine learning algo",
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "rw_008",
+      "category": "file_operations",
+      "direct": {
+        "score": 0.0,
+        "latency_ms": 4974.8,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 33.6,
+        "response_preview": "Found 3 Python files in .:\n  airllm_server.py\n  battle_chatgpt.py\n  main.py",
+        "agent": "TAS"
+      }
+    },
+    {
+      "id": "rw_009",
+      "category": "code_generation",
+      "direct": {
+        "score": 0.0,
+        "latency_ms": 4997.9,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 8079.7,
+        "response_preview": "Sure! Here's a Python function that reads a CSV file and returns the column names:\n\n```python\nimport csv\n\ndef get_column_names(filename):\n    \"\"\"\n    Reads a CSV file and returns the column names.\n   ",
+        "agent": "TAS"
+      }
+    },
+    {
+      "id": "rw_010",
+      "category": "explanation",
+      "direct": {
+        "score": 1.0,
+        "latency_ms": 4918.0,
+        "response_preview": "A **REST API** (Representational State Transfer API) is like a **set of rules** for interacting with a web service. Think of it as a way to ask questions or do actions (like creating, reading, updatin"
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 1128.3,
+        "response_preview": "A REST API is a set of HTTP requests and responses that allow different applications to communicate with each other over the web. It uses standard methods like GET, POST, PUT, and DELETE to interact w",
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "rw_011",
+      "category": "file_management",
+      "direct": {
+        "score": 0,
+        "latency_ms": 4891.7,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 0.5,
+        "latency_ms": 13.5,
+        "response_preview": "Files in . (48 items, 3 Python files):\n  __pycache__/\n  airllm_server.py\n  archive/\n  automation/\n  backups/\n  battle_chatgpt.py\n  config/\n  CONTEXT.md\n  data/\n  demos/\n  dist/\n  docs/\n  examly/\n  han",
+        "agent": "TAS"
+      }
+    },
+    {
+      "id": "rw_012",
+      "category": "system_info",
+      "direct": {
+        "score": 0.0,
+        "latency_ms": 4930.6,
+        "response_preview": ""
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 4894.3,
+        "response_preview": "Sir, the top 5 running processes by memory usage are:  \n1. **bulk_val_0** (importance: 0.5)  \n2. **critical** (importance: 0.95)  \n3. **bulk_val_3** (importance: 0.5)  \n4. **important memory to consol",
+        "agent": "TAS"
+      }
+    }
+  ],
+  "summary": {
+    "total_tasks": 12,
+    "direct_mean_score": 0.139,
+    "orbit_mean_score": 0.743,
+    "category_breakdown": {
+      "file_management": {
+        "direct_mean": 0.0,
+        "orbit_mean": 0.5,
+        "n": 2
+      },
+      "code_generation": {
+        "direct_mean": 0.0,
+        "orbit_mean": 0.75,
+        "n": 2
+      },
+      "debugging": {
+        "direct_mean": 0.0,
+        "orbit_mean": 0.75,
+        "n": 1
+      },
+      "research": {
+        "direct_mean": 0.0,
+        "orbit_mean": 0.667,
+        "n": 1
+      },
+      "system_info": {
+        "direct_mean": 0.333,
+        "orbit_mean": 0.833,
+        "n": 2
+      },
+      "creative": {
+        "direct_mean": 0.0,
+        "orbit_mean": 0.333,
+        "n": 1
+      },
+      "planning": {
+        "direct_mean": 0.0,
+        "orbit_mean": 1.0,
+        "n": 1
+      },
+      "file_operations": {
+        "direct_mean": 0.0,
+        "orbit_mean": 1.0,
+        "n": 1
+      },
+      "explanation": {
+        "direct_mean": 1.0,
+        "orbit_mean": 1.0,
+        "n": 1
+      }
+    }
+  },
+  "elapsed_seconds": 97.78,
+  "status": "completed"
+}

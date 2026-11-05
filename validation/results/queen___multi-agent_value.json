@@ -1,0 +1,156 @@
+{
+  "experiment": "Queen / Multi-Agent Value",
+  "description": "Does multi-agent orchestration improve results?",
+  "orbit_running": true,
+  "tasks": [
+    {
+      "id": "ma_001",
+      "category": "research",
+      "direct": {
+        "score": 1.0,
+        "element_coverage": 1.0,
+        "latency_ms": 8517.5
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 645.4,
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "ma_002",
+      "category": "code_explain",
+      "direct": {
+        "score": 0.25,
+        "element_coverage": 0.0,
+        "latency_ms": 6829.4
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 571.4,
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "ma_003",
+      "category": "analysis",
+      "direct": {
+        "score": 0.25,
+        "element_coverage": 0.0,
+        "latency_ms": 8670.4
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 570.2,
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "ma_004",
+      "category": "planning",
+      "direct": {
+        "score": 0.25,
+        "element_coverage": 0.0,
+        "latency_ms": 8345.7
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 663.5,
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "ma_005",
+      "category": "debugging",
+      "direct": {
+        "score": 1.0,
+        "element_coverage": 1.0,
+        "latency_ms": 5117.9
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 770.3,
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "ma_006",
+      "category": "testing",
+      "direct": {
+        "score": 0.25,
+        "element_coverage": 0.0,
+        "latency_ms": 5815.0
+      },
+      "orbit": {
+        "score": 0.6,
+        "latency_ms": 650.4,
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "ma_007",
+      "category": "explanation",
+      "direct": {
+        "score": 0.25,
+        "element_coverage": 0.0,
+        "latency_ms": 5598.9
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 589.2,
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "ma_008",
+      "category": "design",
+      "direct": {
+        "score": 0.25,
+        "element_coverage": 0.0,
+        "latency_ms": 6421.9
+      },
+      "orbit": {
+        "score": 0.9,
+        "latency_ms": 110.8,
+        "agent": "TAS"
+      }
+    },
+    {
+      "id": "ma_009",
+      "category": "security",
+      "direct": {
+        "score": 0.25,
+        "element_coverage": 0.0,
+        "latency_ms": 7906.7
+      },
+      "orbit": {
+        "score": 1.0,
+        "latency_ms": 612.2,
+        "agent": "QUEEN"
+      }
+    },
+    {
+      "id": "ma_010",
+      "category": "code_generation",
+      "direct": {
+        "score": 0.25,
+        "element_coverage": 0.0,
+        "latency_ms": 6401.4
+      },
+      "orbit": {
+        "score": 0.7,
+        "latency_ms": 596.8,
+        "agent": "QUEEN"
+      }
+    }
+  ],
+  "summary": {
+    "direct_mean_score": 0.4,
+    "orbit_mean_score": 0.92,
+    "delta": 0.52,
+    "direct_mean_latency_ms": 6962.5,
+    "orbit_mean_latency_ms": 578.0
+  },
+  "elapsed_seconds": 80.48,
+  "status": "completed"
+}

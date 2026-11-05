@@ -1,0 +1,140 @@
+{
+  "manifest_version": "1.0",
+  "created_at": "2026-09-17",
+  "purpose": "ORBIT Validation — evidence-based capability assessment",
+  "system": {
+    "git_commit": "76ffd6b714c000542c8bbf19ba99570b2400f2b3",
+    "git_branch": "main",
+    "orbit_version": "3.7.0",
+    "python_version": "3.14.6",
+    "platform": "win32",
+    "architecture": "AMD64"
+  },
+  "models": {
+    "default_model": "qwen3:8b",
+    "ollama_url": "http://127.0.0.1:11434",
+    "available_models": [
+      "qwen3:8b",
+      "qwen3:1.7b",
+      "llama3.2:latest",
+      "nomic-embed-text:latest"
+    ],
+    "primary_model": "qwen3:8b",
+    "embedding_model": "nomic-embed-text:latest"
+  },
+  "agents": {
+    "total": 25,
+    "registry": [
+      "QUEEN",
+      "TAS",
+      "COD",
+      "RES",
+      "WRI",
+      "COA",
+      "DEC",
+      "SEC",
+      "SECG",
+      "MEM",
+      "SCR",
+      "SOC",
+      "MTG",
+      "FTN",
+      "THB",
+      "SEO",
+      "QNT",
+      "LOG",
+      "CNC",
+      "PLN",
+      "EXE",
+      "PMA",
+      "CRT",
+      "HRM",
+      "MMA"
+    ]
+  },
+  "configuration": {
+    "smart_router_enabled": true,
+    "quality_gate_enabled": true,
+    "memory_enabled": true,
+    "learning_enabled": true,
+    "conversation_engine_enabled": true,
+    "context_manager_enabled": true,
+    "auto_healer_enabled": false,
+    "cost_tracker_enabled": false
+  },
+  "environment_assumptions": [
+    "Ollama running on localhost:11434",
+    "qwen3:8b model available",
+    "No cloud API keys configured (OpenRouter, Gemini, Groq, etc.)",
+    "Local-only operation",
+    "Single-user desktop mode",
+    "Flask API on localhost:5000"
+  ],
+  "freeze_rules": [
+    "No code changes during validation",
+    "No prompt changes during validation",
+    "No routing threshold changes during validation",
+    "No learning system modifications during validation",
+    "Evaluation dataset is SEPARATE from ORBIT's learning data"
+  ],
+  "experiments": {
+    "total": 10,
+    "scripts": [
+      "experiment_1_smartrouter.py",
+      "experiment_2_multi_agent.py",
+      "experiment_3_memory.py",
+      "experiment_4_learning.py",
+      "experiment_5_error_recovery.py",
+      "experiment_6_tool_reality.py",
+      "experiment_7_concurrency.py",
+      "experiment_8_quality_gate.py",
+      "experiment_9_full_pipeline.py",
+      "experiment_10_real_world.py"
+    ],
+    "runner": "run_all.py",
+    "status": "completed",
+    "completed_at": "2026-10-05",
+    "results_file": "results/all_results.json",
+    "rerun_note": "E2/E4/E7 re-run after 3 harness fixes (future-annotations, PYTHONIOENCODING=utf-8, project-root sys.path); E6/E9/E10 re-run 2026-10-06 after tool/router/session-isolation fixes"
+  },
+  "claim_verification": {
+    "total_claims": 42,
+    "verified": 42,
+    "disputed": 0,
+    "refuted": 0,
+    "pending": 0,
+    "table_file": "claim_verification_table.md",
+    "updated_at": "2026-10-07",
+    "note": "All 13 CLAIMED rows closed 2026-10-07: battle v2 raw-record re-derivation (56/60 = 0.9333 exact), 8 new tests in tests/test_pending_claims.py (context routing, quality-gate skip/refine/FPR, concurrent IDs, resource-leak churn), live browser probe (SmartBrowser + BrowserTool), existing-suite re-runs (tier1 37, breaker+reliability 63, consolidation 6). Real leak found+fixed: TFIDFRetriever.add() unbounded -> FIFO cap 2000. Prior: DISPUTED closed 2026-10-06 (tools 36 re-derived, GT 96.1%)"
+  },
+  "run_metadata": {
+    "run_date": "2026-10-05",
+    "rerun_date": "2026-10-06 (E4/E6/E9/E10 + session isolation)",
+    "baseline_models": {
+      "single_turn": "qwen3:1.7b",
+      "with_context": "qwen3:8b",
+      "note": "experiment_base.get_ollama_response defaults (see scripts/experiment_base.py:178,200)"
+    },
+    "orbit_api": "http://127.0.0.1:5000 (198 blueprints, ORBIT_API_AUTH_ENABLED=0)",
+    "key_results": {
+      "e1_smartrouter": "direct 0.123 vs orbit 0.566 (+359%)",
+      "e2_multi_agent": "direct 0.35 vs orbit 0.92 (+0.57) at equal latency",
+      "e3_memory": "baseline 0.125 vs orbit 0.562 (+0.437)",
+      "e4_learning": "8/8 passed (100%) after 2026-10-06 list-hijack fix (was 7/8 fail=instruction_following)",
+      "e5_error_recovery": "recovery 80%, 0 crashes on 10 hostile inputs",
+      "e6_tool_reality": "RERUN 2026-10-06: 10/10 tasks (100%) after tool-execution fixes (was 4/10 on Oct-5)",
+      "e7_concurrency": "chat+file 100% (0 corrupted); 429s = rate limiter working",
+      "e8_quality_gate": "direct 0.27 vs orbit 0.73; orbit also faster (2075 vs 4365ms)",
+      "e9_full_pipeline": "RERUN 2026-10-06: direct 0.152 vs orbit 0.386 (+153%); wins 25/losses 2/ties 33; ORBIT FASTER -1926ms (2871 vs 4797ms, per-task sessions + battle-chain fix; old +1921ms was shared-session artifact). Oct-5 run: 0.113 vs 0.542 (+377%), +1921ms",
+      "e10_real_world": "RERUN 2026-10-06: direct 0.139 vs orbit 0.743 (12/12 tasks, per-task isolated sessions); file_operations 1.00 (was 0.0 — list-refusal + brittle list regexes fixed in computer/task_agents/smart_router). Oct-5 run: 0.243 vs 0.653"
+    }
+  },
+  "dataset": {
+    "file": "benchmark_dataset.json",
+    "total_tasks": 300,
+    "categories": 15,
+    "dev_tasks": 210,
+    "holdout_tasks": 90,
+    "split_ratio": "70/30"
+  }
+}

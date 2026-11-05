@@ -1,0 +1,42 @@
+[
+  {
+    "cat": "general_knowledge",
+    "prompt": "What is the capital of Australia?",
+    "direct": 1.0,
+    "orbit": 1.0,
+    "d_lat": 7.8,
+    "o_lat": 19.0
+  },
+  {
+    "cat": "reasoning",
+    "prompt": "A farmer has 17 sheep. All but 9 die. How many she",
+    "direct": 0.0,
+    "orbit": 0.8888888888888888,
+    "d_lat": 10.6,
+    "o_lat": 18.8
+  },
+  {
+    "cat": "mathematics",
+    "prompt": "What is 17 x 23?",
+    "direct": 0.0,
+    "orbit": 0.04347826086956519,
+    "d_lat": 10.8,
+    "o_lat": 18.9
+  },
+  {
+    "cat": "coding",
+    "prompt": "Write a Python function that checks if a string is",
+    "direct": 0.0,
+    "orbit": 0.0,
+    "d_lat": 11.0,
+    "o_lat": 0.1
+  },
+  {
+    "cat": "memory",
+    "prompt": "Remember that my favorite color is blue. Later, wh",
+    "direct": 1.0,
+    "orbit": 1.0,
+    "d_lat": 4.0,
+    "o_lat": 32.1
+  }
+]

@@ -1,0 +1,273 @@
+﻿{
+    "run_id":  "orbit-bugfix-loop-20260930-181615",
+    "task_alias":  "orbit-bugfix-loop",
+    "status":  "completed",
+    "iteration":  3,
+    "max_iterations":  6,
+    "phase":  "B",
+    "current_step":  "STOPPED",
+    "task":  {
+                 "prompt":  "Iteratively find real bugs in the ORBIT codebase (Python backend + React frontend), fix each with a regression test, verify no new test failures, then after the loop run load test and stress test, and deliver a final report.",
+                 "ideal_result":  "Verified bug fixes (file:line + root cause + fix + passing regression test), no regressions vs baseline, load/stress test results with numeric metrics, final report artifact."
+             },
+    "criteria":  {
+                     "name":  "bugfix_loop_v1",
+                     "version":  1,
+                     "confirmed_by_user":  true,
+                     "phase":  {
+                                   "A":  {
+                                             "threshold":  0.8,
+                                             "active_levels":  [
+                                                                   "A"
+                                                               ]
+                                         },
+                                   "B":  {
+                                             "threshold":  0.9,
+                                             "active_levels":  [
+                                                                   "A",
+                                                                   "B"
+                                                               ]
+                                         }
+                               },
+                     "rules":  [
+                                   {
+                                       "id":  "a.correctness.compiles",
+                                       "description":  "Every modified Python file compiles/parses without errors",
+                                       "severity":  "fail",
+                                       "weight":  2,
+                                       "phase":  "A",
+                                       "check":  "Run py_compile on every file changed by the loop; require exit code 0 for all"
+                                   },
+                                   {
+                                       "id":  "a.correctness.tests-pass",
+                                       "description":  "A regression test exists per fix and the targeted test batch passes",
+                                       "severity":  "fail",
+                                       "weight":  2,
+                                       "phase":  "A",
+                                       "check":  "For each bug fixed there is a test; run pytest on the loop\u0027s regression batch and require exit code 0"
+                                   },
+                                   {
+                                       "id":  "a.correctness.no-new-failures",
+                                       "description":  "Regression batch gains no new failures vs recorded baseline",
+                                       "severity":  "fail",
+                                       "weight":  2,
+                                       "phase":  "A",
+                                       "check":  "Run the loop regression batch and compare failure count against the recorded baseline from run start"
+                                   },
+                                   {
+                                       "id":  "a.completeness.bug-doc",
+                                       "description":  "Each fix documented with file path:line, root cause, fix, and verification",
+                                       "severity":  "fail",
+                                       "weight":  2,
+                                       "phase":  "A",
+                                       "check":  "Artifact contains one section per bug with: file path and line, root cause, fix applied, verification (test command + result)"
+                                   },
+                                   {
+                                       "id":  "a.quality.minimal-diff",
+                                       "description":  "Fixes are scoped to the bug â€” no unrelated reformatting or refactors",
+                                       "severity":  "warn",
+                                       "weight":  1,
+                                       "phase":  "A",
+                                       "check":  "git diff of changed files contains only bug-fix hunks; no wholesale reformatting"
+                                   },
+                                   {
+                                       "id":  "a.completeness.report-structure",
+                                       "description":  "Report has Summary, Bugs, and Test Results sections",
+                                       "severity":  "warn",
+                                       "weight":  1,
+                                       "phase":  "A",
+                                       "check":  "Artifact contains headings: Summary, Bugs, Test Results"
+                                   },
+                                   {
+                                       "id":  "b.performance.load-test",
+                                       "description":  "Load test executed with numeric results (RPS, latency p95, error rate)",
+                                       "severity":  "fail",
+                                       "weight":  2,
+                                       "phase":  "B",
+                                       "check":  "Artifact contains a Load Test section with numeric RPS, p95 latency, and error rate values"
+                                   },
+                                   {
+                                       "id":  "b.performance.stress-test",
+                                       "description":  "Stress test executed with documented limits and failure points",
+                                       "severity":  "fail",
+                                       "weight":  2,
+                                       "phase":  "B",
+                                       "check":  "Artifact contains a Stress Test section with numeric concurrency/load levels and observed failure or degradation points"
+                                   },
+                                   {
+                                       "id":  "b.completeness.final-metrics",
+                                       "description":  "Report includes metrics table: bugs found, bugs fixed, tests run, tests passed",
+                                       "severity":  "warn",
+                                       "weight":  1,
+                                       "phase":  "B",
+                                       "check":  "Artifact contains a metrics table with numeric values for bugs_found, bugs_fixed, tests_run, tests_passed"
+                                   },
+                                   {
+                                       "id":  "b.quality.evidence",
+                                       "description":  "Each fix links the pytest command used and its result summary",
+                                       "severity":  "warn",
+                                       "weight":  1,
+                                       "phase":  "B",
+                                       "check":  "Every bug section includes the exact pytest command and a pass-count result line"
+                                   }
+                               ]
+                 },
+    "plan":  [
+                 "Re-verify refined artifact against all 10 B-phase checks"
+             ],
+    "prepared_checks":  {
+                            "phase":  "B",
+                            "checks":  [
+                                           {
+                                               "expected":  "Load Test section with numeric RPS, p95 latency, error rate (case-insensitive)",
+                                               "rule_id":  "b.performance.load-test",
+                                               "search":  "(?is)## Load Test.*RPS.*p95.*error",
+                                               "type":  "content"
+                                           },
+                                           {
+                                               "expected":  "Stress Test section with concurrency levels and degradation point",
+                                               "rule_id":  "b.performance.stress-test",
+                                               "search":  "(?s)## Stress Test.*(concurrency|concurrent).*degrad",
+                                               "type":  "content"
+                                           },
+                                           {
+                                               "expected":  "metrics table with numeric bugs_found, bugs_fixed, tests_run, tests_passed",
+                                               "rule_id":  "b.completeness.final-metrics",
+                                               "search":  "(?s)bugs_found.*?\\d+.*bugs_fixed.*?\\d+.*tests_run.*?\\d+.*tests_passed.*?\\d+",
+                                               "type":  "content"
+                                           },
+                                           {
+                                               "expected":  "each bug Verification cites pytest command and a pass count",
+                                               "rule_id":  "b.quality.evidence",
+                                               "search":  "(?s)- \\*\\*Verification:\\*\\* py -m pytest[^]*[^#]*?passed",
+                                               "type":  "content"
+                                           },
+                                           {
+                                               "expected":  "all changed .py compile, exit 0",
+                                               "rule_id":  "a.correctness.compiles",
+                                               "type":  "executable",
+                                               "command":  "(same as phase A)"
+                                           },
+                                           {
+                                               "expected":  "regression batch + loop tests exit 0",
+                                               "rule_id":  "a.correctness.tests-pass",
+                                               "type":  "executable",
+                                               "command":  "(same as phase A)"
+                                           },
+                                           {
+                                               "expected":  "0 failed and passed \u003e= 112",
+                                               "rule_id":  "a.correctness.no-new-failures",
+                                               "type":  "executable",
+                                               "command":  "(same as phase A)"
+                                           },
+                                           {
+                                               "expected":  "per-bug File:line/Root cause/Fix/Verification",
+                                               "rule_id":  "a.completeness.bug-doc",
+                                               "search":  "(?s)## Bugs.*### BUG-\\d+:.*\\*\\*File:\\*\\*.+:\\d+.*\\*\\*Root cause:\\*\\*.*\\*\\*Fix:\\*\\*.*\\*\\*Verification:\\*\\*.*pytest",
+                                               "type":  "content"
+                                           },
+                                           {
+                                               "expected":  "App.jsx/CONTEXT/.env clean; orbit+tests diffs .py only",
+                                               "rule_id":  "a.quality.minimal-diff",
+                                               "type":  "executable",
+                                               "command":  "(same as phase A)"
+                                           },
+                                           {
+                                               "expected":  "headings Summary, Bugs, Test Results in order",
+                                               "rule_id":  "a.completeness.report-structure",
+                                               "search":  "## Summary[\\s\\S]+## Bugs[\\s\\S]+## Test Results",
+                                               "type":  "content"
+                                           }
+                                       ],
+                            "generated_at":  "2026-09-30T18:30:00Z"
+                        },
+    "evaluation":  {
+                       "score":  1,
+                       "passed":  true,
+                       "evaluated_at":  "2026-09-30T18:48:00Z",
+                       "failed":  [
+
+                                  ],
+                       "warnings":  [
+
+                                    ],
+                       "rule_results":  [
+                                            {
+                                                "id":  "a.correctness.compiles",
+                                                "verdict":  "pass",
+                                                "details":  "changed .py files compile clean"
+                                            },
+                                            {
+                                                "id":  "a.correctness.tests-pass",
+                                                "verdict":  "pass",
+                                                "details":  "142 passed, exit 0"
+                                            },
+                                            {
+                                                "id":  "a.correctness.no-new-failures",
+                                                "verdict":  "pass",
+                                                "details":  "0 failed, 142 \u003e= 112 baseline"
+                                            },
+                                            {
+                                                "id":  "a.completeness.bug-doc",
+                                                "verdict":  "pass",
+                                                "details":  "7/7 bugs: File:line + Root cause + Fix + Verification(pytest)"
+                                            },
+                                            {
+                                                "id":  "a.quality.minimal-diff",
+                                                "verdict":  "pass",
+                                                "details":  "App.jsx/CONTEXT/.env clean; diffs .py only"
+                                            },
+                                            {
+                                                "id":  "a.completeness.report-structure",
+                                                "verdict":  "pass",
+                                                "details":  "Summary/Bugs/Test Results in order"
+                                            },
+                                            {
+                                                "id":  "b.performance.load-test",
+                                                "verdict":  "pass",
+                                                "details":  "2 runs, numeric rps/p95/error_rate present"
+                                            },
+                                            {
+                                                "id":  "b.performance.stress-test",
+                                                "verdict":  "pass",
+                                                "details":  "ramp 10-400 conc, failure analysis present"
+                                            },
+                                            {
+                                                "id":  "b.completeness.final-metrics",
+                                                "verdict":  "pass",
+                                                "details":  "metrics table numeric"
+                                            },
+                                            {
+                                                "id":  "b.quality.evidence",
+                                                "verdict":  "pass",
+                                                "details":  "7/7 Verification cite pytest + pass counts"
+                                            }
+                                        ]
+                   },
+    "critique":  {
+                     "generated_at":  "2026-09-30T18:40:10Z",
+                     "run":  null,
+                     "issues":  [
+                                    {
+                                        "rule_id":  "a.completeness.bug-doc",
+                                        "problem":  "BUG-5 (relationship_tracker birthday reminder) section has File/Fix/Verification but no \u0027- **Root cause:**\u0027 line, so the per-bug documentation contract is incomplete",
+                                        "fix_instruction":  "Add a \u0027- **Root cause:** ...\u0027 line to the BUG-5 section describing: datetime.now() time-of-day compared against midnight-parsed birthday gives negative timedelta that floors to -1 day, so the reminder fires only on the day BEFORE the birthday (never on the birthday itself); Feb-29 contacts raise ValueError in non-least/non-leap years and are silently skipped (continue), so their reminder never fires in 3 of 4 years. Keep all other content unchanged.",
+                                        "expected_effect":  "Rule a.completeness.bug-doc passes (7/7 sections have File:line + Root cause + Fix + Verification)"
+                                    }
+                                ]
+                 },
+    "stop":  {
+                 "passed":  true,
+                 "reason":  "phase B quality gate passed (score 1.0 \u003e= 0.9) at iteration 3 of max 6"
+             },
+    "last_score":  1,
+    "stagnation_count":  0,
+    "created_at":  "2026-09-30T18:16:15Z",
+    "updated_at":  "2026-09-30T18:48:00Z",
+    "baseline":  {
+                     "batch":  "stripe-e2e,billing,deploy-probes,api-auth-security,tenancy-isolation,auth,security-headers,security-guard",
+                     "passed":  112,
+                     "failed":  0,
+                     "ts":  "2026-09-30T18:17:00Z"
+                 }
+}

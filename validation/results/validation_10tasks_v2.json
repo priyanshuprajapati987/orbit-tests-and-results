@@ -1,0 +1,82 @@
+{
+  "results": {
+    "general_knowledge": {
+      "direct": 1.0,
+      "orbit": 1.0,
+      "delta": 0.0
+    },
+    "reasoning": {
+      "direct": 0.0,
+      "orbit": 0.944,
+      "delta": 0.944
+    },
+    "mathematics": {
+      "direct": 0.0,
+      "orbit": 0.438,
+      "delta": 0.438
+    },
+    "coding": {
+      "direct": 0.0,
+      "orbit": 0.0,
+      "delta": 0.0
+    },
+    "memory": {
+      "direct": 0.0,
+      "orbit": 1.0,
+      "delta": 1.0
+    }
+  },
+  "details": [
+    {
+      "cat": "general_knowledge",
+      "d": 1.0,
+      "o": 1.0
+    },
+    {
+      "cat": "general_knowledge",
+      "d": 1.0,
+      "o": 1.0
+    },
+    {
+      "cat": "reasoning",
+      "d": 0.0,
+      "o": 0.8888888888888888
+    },
+    {
+      "cat": "reasoning",
+      "d": 0.0,
+      "o": 1.0
+    },
+    {
+      "cat": "mathematics",
+      "d": 0.0,
+      "o": 0.04347826086956519
+    },
+    {
+      "cat": "mathematics",
+      "d": 0.0,
+      "o": 0.8333333333333334
+    },
+    {
+      "cat": "coding",
+      "d": 0.0,
+      "o": 0.0
+    },
+    {
+      "cat": "coding",
+      "d": 0.0,
+      "o": 0.0
+    },
+    {
+      "cat": "memory",
+      "d": 0.0,
+      "o": 1.0
+    },
+    {
+      "cat": "memory",
+      "d": 0.0,
+      "o": 1.0
+    }
+  ],
+  "ts": "2026-09-17 22:07"
+}

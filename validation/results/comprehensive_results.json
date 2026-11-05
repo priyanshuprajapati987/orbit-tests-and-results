@@ -1,0 +1,26 @@
+{
+  "Knowledge": {
+    "direct": 1.0,
+    "orbit": 0.8
+  },
+  "Reasoning": {
+    "direct": 0.0,
+    "orbit": 0.778
+  },
+  "Tools": {
+    "passed": 3,
+    "total": 3
+  },
+  "Memory": {
+    "passed": 0,
+    "total": 2
+  },
+  "Concurrency": {
+    "success": 5,
+    "failed": 0
+  },
+  "ErrorRecovery": {
+    "recovered": 3,
+    "total": 3
+  }
+}

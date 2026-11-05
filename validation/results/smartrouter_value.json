@@ -1,0 +1,966 @@
+{
+  "experiment": "SmartRouter Value",
+  "description": "Does SmartRouter improve outcomes vs direct model?",
+  "total_tasks": 50,
+  "baselines": {
+    "A_direct": {
+      "mean_score": 0.123,
+      "n": 50
+    },
+    "C_orbit": {
+      "mean_score": 0.566,
+      "n": 48
+    }
+  },
+  "task_results": [
+    {
+      "id": "gk_001",
+      "category": "general_knowledge",
+      "prompt": "What is the capital of Australia?",
+      "baselines": {
+        "A_direct": {
+          "response": "The capital of Australia is **Canberra**. It is the largest city in the country and serves as the seat of the Australian government. Canberra was established in 1901 as a planned capital city, designed to avoid the seasonal flooding that affects Sydney. The name \"Canberra\" is derived from the Australian Aboriginal word \"Kangaroo,\" which is a reference to the city's location near a kangaroo reserve.",
+          "score": 1.0,
+          "latency_ms": 2938.0
+        },
+        "C_orbit": {
+          "response": "Australia's capital is Canberra.",
+          "score": 1.0,
+          "latency_ms": 1451.8,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_002",
+      "category": "general_knowledge",
+      "prompt": "Who wrote the novel 1984?",
+      "baselines": {
+        "A_direct": {
+          "response": "The novel *1984* was written by **George Orwell**. Published in 1949, it is a dystopian fiction novel that explores themes of totalitarianism, surveillance, and the manipulation of truth. The story follows Winston Smith, a dissenter in a totalitarian regime, as he struggles against the oppressive Party that controls society. Orwell is widely regarded as one of the most influential authors in modern literature.",
+          "score": 1.0,
+          "latency_ms": 3004.7
+        },
+        "C_orbit": {
+          "response": "George Orwell.",
+          "score": 1.0,
+          "latency_ms": 1361.9,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_003",
+      "category": "general_knowledge",
+      "prompt": "What is the chemical symbol for gold?",
+      "baselines": {
+        "A_direct": {
+          "response": "The chemical symbol for gold is **Au**. \n\n**Explanation:**  \nGold is a metallic element with the atomic number 79. Its symbol, **Au**, comes from the Latin name *aurum*, which means \"gold\" in Latin. The symbol is derived from the element's Latin name and is commonly used in the periodic table. \n\nOther elements, such as silver (Ag), platinum (Pt), and copper (Cu), follow a similar naming convention, where the symbol is based on the Latin name of the element. \n\nThus, the chemical symbol for gold i",
+          "score": 1.0,
+          "latency_ms": 3848.3
+        },
+        "C_orbit": {
+          "response": "Gold's chemical symbol is Au.",
+          "score": 1.0,
+          "latency_ms": 481.9,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_004",
+      "category": "general_knowledge",
+      "prompt": "How many continents are there on Earth?",
+      "baselines": {
+        "A_direct": {
+          "response": "The Earth is divided into **seven continents**:\n\n1. **Asia**  \n2. **Africa**  \n3. **North America**  \n4. **South America**  \n5. **Europe**  \n6. **Australia** (often referred to as **Oceania** as a single continent, though it is technically a collection of islands and mainland regions)  \n7. **Antarctica**  \n\n**Note:**  \n- **Oceania** is sometimes considered a single continent (along with Australia, New Guinea, and the Pacific islands), but it is not typically counted as a separate continent in th",
+          "score": 0.1428571428571429,
+          "latency_ms": 4680.6
+        },
+        "C_orbit": {
+          "response": "There are seven continents on Earth.",
+          "score": 0.0,
+          "latency_ms": 1390.9,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_005",
+      "category": "general_knowledge",
+      "prompt": "What year did World War II end?",
+      "baselines": {
+        "A_direct": {
+          "response": "World War II ended on **August 15, 1945**, when Japan surrendered to the Allied forces. This date marks the conclusion of the war in the Pacific. However, the formal surrender of Nazi Germany occurred on **May 8, 1945**, in the presence of U.S. President Harry S. Truman. \n\nThe war in Europe concluded on **May 8, 1945**, with the Allied victory over Nazi Germany. The global conflict ended on **August 15, 1945**, with Japan's acceptance of the Allied surrender terms. \n\n**Key points:**  \n- **Europe",
+          "score": 0.007712082262210762,
+          "latency_ms": 3936.9
+        },
+        "C_orbit": {
+          "response": "World War II ended in 1945.",
+          "score": 1.0,
+          "latency_ms": 1528.1,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_006",
+      "category": "general_knowledge",
+      "prompt": "What is the largest ocean on Earth?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4934.9
+        },
+        "C_orbit": {
+          "response": "The largest ocean on Earth is the Pacific Ocean.",
+          "score": 1.0,
+          "latency_ms": 2179.5,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_007",
+      "category": "general_knowledge",
+      "prompt": "Who painted the Mona Lisa?",
+      "baselines": {
+        "A_direct": {
+          "response": "The **Mona Lisa** (French: *La Joconde*) is a celebrated painting by **Leonardo da Vinci**, an Italian polymath and one of the most renowned artists in history. Created around **1503–1519**, it is part of the *The School of Athens* in the *Palais du Louvre* in Paris. \n\n###",
+          "score": 1.0,
+          "latency_ms": 4845.7
+        },
+        "C_orbit": {
+          "response": "Leonardo da Vinci painted the Mona Lisa.",
+          "score": 1.0,
+          "latency_ms": 1554.6,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_008",
+      "category": "general_knowledge",
+      "prompt": "What is the speed of light in vacuum in km/s (approximately)?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4930.9
+        },
+        "C_orbit": {
+          "response": "The speed of light in a vacuum is approximately 300,000 km/s.",
+          "score": 0.001000693814377951,
+          "latency_ms": 812.9,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_009",
+      "category": "general_knowledge",
+      "prompt": "Which planet in our solar system has the most moons as of 2026?",
+      "baselines": {
+        "A_direct": {
+          "response": "As of 2026, **Jupiter** is the planet in our solar system with the most moons. \n\n### Key Details:\n- **Jupiter** has over **1,000 moons** (known as the \"Galilean moons\"):  \n  - **Io** (volcanic island),  \n  - **Europa** (ocean-world),  \n  - **Ganymede** (largest moon, larger than Mars),  \n  - **Callisto** (has a moon, Triton, in its orbit).  \n\n- **Saturn** has **82 moons**, **Uranus** has **27**, and **Neptune** has **1",
+          "score": 1.0,
+          "latency_ms": 4839.0
+        },
+        "C_orbit": {
+          "response": "Jupiter has the most moons in our solar system as of 2026.",
+          "score": 0.0,
+          "latency_ms": 1624.3,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "gk_010",
+      "category": "general_knowledge",
+      "prompt": "What is the boiling point of water at sea level in Fahrenheit?",
+      "baselines": {
+        "A_direct": {
+          "response": "The boiling point of water at sea level (standard atmospheric pressure of 1 atmosphere) is **212°F**. This is a well-established scientific fact. \n\n### Explanation:\n- **Boiling Point in Celsius**: Water boils at **100°C** under standard conditions.\n- **Conversion to Fahrenheit**: Using the formula:\n  $$\n  \\text{°F} = \\left( \\text{°C} \\times \\frac{9}{5} \\right) + 32\n  $$\n  Substituting 100°C:\n  $$\n  \\text{°F} = \\left( 100 \\times \\frac{9}{5} \\right)",
+          "score": 0.004716981132075526,
+          "latency_ms": 5028.1
+        },
+        "C_orbit": {
+          "response": "The boiling point of water at sea level is 212°F.",
+          "score": 1.0,
+          "latency_ms": 633.4,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_011",
+      "category": "general_knowledge",
+      "prompt": "In what country would you find Machu Picchu?",
+      "baselines": {
+        "A_direct": {
+          "response": "Machu Picchu is located in **Peru**, specifically in the **Cusco region** within the **Andean highlands**. It is a renowned archaeological site and a UNESCO World Heritage Site, part of the Inca Empire's legacy. The ancient city, built during the 15th century, is situated high in the Andes Mountains, near the modern town of Cusco.",
+          "score": 1.0,
+          "latency_ms": 4128.7
+        },
+        "C_orbit": {
+          "response": "Machu Picchu is in Peru.",
+          "score": 1.0,
+          "latency_ms": 1790.0,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_012",
+      "category": "general_knowledge",
+      "prompt": "What is the smallest bone in the human body?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4879.4
+        },
+        "C_orbit": {
+          "response": "The smallest bone in the human body is the incus, also known as the stapes.",
+          "score": 0.3333333333333333,
+          "latency_ms": 637.9,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_013",
+      "category": "general_knowledge",
+      "prompt": "What element has the atomic number 79?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4921.9
+        },
+        "C_orbit": {
+          "response": "The element with atomic number 79 is gold (Au).",
+          "score": 1.0,
+          "latency_ms": 577.0,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "gk_014",
+      "category": "general_knowledge",
+      "prompt": "Who developed the theory of general relativity?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4877.5
+        },
+        "C_orbit": {
+          "response": "Albert Einstein developed the theory of general relativity.",
+          "score": 1.0,
+          "latency_ms": 1703.1,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "reason_001",
+      "category": "reasoning",
+      "prompt": "A farmer has 17 sheep. All but 9 die. How many sheep are left?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 5009.4
+        },
+        "C_orbit": {
+          "response": "The farmer has 9 sheep left.",
+          "score": 1.0,
+          "latency_ms": 3248.2,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "reason_002",
+      "category": "reasoning",
+      "prompt": "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4885.7
+        },
+        "C_orbit": {
+          "response": "It would take 5 minutes.",
+          "score": 1.0,
+          "latency_ms": 591.5,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_003",
+      "category": "reasoning",
+      "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4844.9
+        },
+        "C_orbit": {
+          "response": "Sir, the ball costs $0.05. The bat is $1.05, and together they add up to $1.10. Done! 😊",
+          "score": 1.0,
+          "latency_ms": 3455.9,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_004",
+      "category": "reasoning",
+      "prompt": "There are 3 apples and you take away 2. How many apples do you have?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4942.8
+        },
+        "C_orbit": {
+          "response": "You have 1 apple left.",
+          "score": 0.5,
+          "latency_ms": 1723.3,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "reason_005",
+      "category": "reasoning",
+      "prompt": "If you rearrange the letters CIFAIPC you get the name of a(n): (a) city (b) animal (c) ocean (d) river",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4936.6
+        },
+        "C_orbit": {
+          "response": "The letters form \"CIFAPIC\", which is an abbreviation for \"City\" in some contexts.",
+          "score": 0.0,
+          "latency_ms": 697.2,
+          "agent": "QUEEN",
+          "provider": "recovery:local_fallback"
+        }
+      }
+    },
+    {
+      "id": "reason_006",
+      "category": "reasoning",
+      "prompt": "In a room of 23 people, what is the approximate probability that at least two share a birthday?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4877.1
+        },
+        "C_orbit": {
+          "response": "Sir, the probability is approximately 50.7%. It's calculated by considering all possible unique birthday combinations and subtracting from 1. The exact value is around 50.7%, which is why it's called the \"birthday paradox.\" \n\nDone! 🎉",
+          "score": 0,
+          "latency_ms": 4521.6,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_007",
+      "category": "reasoning",
+      "prompt": "A clock shows 3:15. What is the angle between the hour and minute hands?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4882.2
+        },
+        "C_orbit": {
+          "response": "Sir, the angle between the hour and minute hands at 3:15 is **7.5 degrees**.  \n\nDone! 😊  \n\n**Hindi:**  \nSir, 3:15 पर घंटे और मिनट के बीच कोन्कल्ट कोण 7.5 डिग्री है।  \n\n**English:**  \nSir, the angle between the hour and minute hands at 3:15 is 7.5 degrees.  \n\nDone! 😊",
+          "score": 0.4,
+          "latency_ms": 9839.0,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_008",
+      "category": "reasoning",
+      "prompt": "You have two ropes. Each takes exactly 1 hour to burn completely, but they burn at non-uniform rates. How do you measure exactly 45 minutes?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 5005.5
+        },
+        "C_orbit": {
+          "response": "Sir, done! The trick is to light both ropes at the same time. When one burns out, light the other end. When the second burns out, 30 minutes have passed. Then, you have 15 minutes left. But since the ropes burn at non-uniform rates, the 30 minutes mark is sufficient to measure 45 minutes by combining the remaining time.  \n\nSir, done! The method involves lighting both ropes at once. When one burns out, light the other end. When the second burns out, 30 minutes have passed, and the remaining 15 mi",
+          "score": 0.6666666666666666,
+          "latency_ms": 30244.6,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_009",
+      "category": "reasoning",
+      "prompt": "If 3 cats can catch 3 rats in 3 minutes, how many cats are needed to catch 100 rats in 100 minutes?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 5026.5
+        },
+        "C_orbit": {
+          "response": "Sir, the answer is 1 cat. Since each cat catches 1 rat per minute, 100 rats in 100 minutes requires exactly 1 cat.  \n\nDone! 🐱 rats caught: 100 in 100 minutes with 1 cat.",
+          "score": 0.33333333333333337,
+          "latency_ms": 5889.8,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_010",
+      "category": "reasoning",
+      "prompt": "A man is looking at a photograph. He says: Brothers and sisters I have none, but that mans father is my fathers son. Who is in the photograph?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4872.7
+        },
+        "C_orbit": {
+          "response": "Sir, the photograph shows the man's son. The riddle plays on the idea that the man's father is his father's son, which logically means the man in the photo is his son.  \n\nDone! 🎯",
+          "score": 1.0,
+          "latency_ms": 8832.4,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_011",
+      "category": "reasoning",
+      "prompt": "You are in a cabin and it is pitch black. You have one match on you. Which do you light first: the candle, the oil lamp, or the fireplace?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 5034.3
+        },
+        "C_orbit": {
+          "response": "Sir, the fireplace is the best choice first since it's designed to burn wood with the match. Then, I'd light the candle or oil lamp next. Done! 🌙✨",
+          "score": 1.0,
+          "latency_ms": 3690.1,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_012",
+      "category": "reasoning",
+      "prompt": "What comes next in the sequence: 1, 1, 2, 3, 5, 8, 13, ...?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 5001.9
+        },
+        "C_orbit": {
+          "response": "Sir, the next number in the sequence is **21**. The pattern is based on the Fibonacci sequence, where each number is the sum of the two preceding ones.  \n\n**Sir, 21**. The sequence follows the Fibonacci rule (each number is the sum of the two before it).  \n\nLet me confirm: 1, 1, 2, 3, 5, 8, 13, **21**. ✅",
+          "score": 1.0,
+          "latency_ms": 3839.8,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_017",
+      "category": "reasoning",
+      "prompt": "What has keys but no locks, space but no room, and you can enter but cannot go inside?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4955.4
+        },
+        "C_orbit": {
+          "response": "Sir, done! The riddle's answer is a dictionary. It has keys (letters), no locks, space (letters), no room, and you can enter (look) but not go inside (take).",
+          "score": 0.0,
+          "latency_ms": 3719.2,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "reason_018",
+      "category": "reasoning",
+      "prompt": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 5136.1
+        },
+        "C_orbit": {
+          "response": "Sir, done! 🌟 The answer is AIR. It speaks without a mouth, hears without ears, and comes alive with the wind. 😊",
+          "score": 0.0,
+          "latency_ms": 4326.5,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_001",
+      "category": "mathematics",
+      "prompt": "What is 17 x 23?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4872.1
+        },
+        "C_orbit": {
+          "response": "Sir, 17 x 23 is 391. Let me confirm... Yep, 17 multiplied by 23 equals 391. Done! 😊",
+          "score": 0.04347826086956519,
+          "latency_ms": 2603.1,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_002",
+      "category": "mathematics",
+      "prompt": "Solve for x: 2x + 5 = 17",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4976.8
+        },
+        "C_orbit": {
+          "response": "Sir, the solution is x = 6.  \nIn Hindi: द्विघात बीजगणित के द्वारा, 2x + 5 = 17 को समाप्त करने के लिए, x के लिए 5 को घटाना आवश्यक है, जो 2x = 12 बनाता है, और तब x = 6 होता है।  \nIn English: To solve 2x + 5 = 17, subtract 5 from both sides to get 2x = 12, then divide by 2 to find x = 6.  \nConfirmation: 2(6) + 5 = 17 ✔️.  \n\nSir, done! 😊",
+          "score": 1.0,
+          "latency_ms": 4835.5,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_003",
+      "category": "mathematics",
+      "prompt": "What is the derivative of x^3 + 2x^2 - 5x + 7?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 5026.1
+        },
+        "C_orbit": {
+          "response": "Sir, the derivative of $ x^3 + 2x^2 - 5x + 7 $ is $ 3x^2 + 4x - 5 $. I broke it down term by term: the derivative of $ x^3 $ is $ 3x^2 $, $ 2x^2 $ becomes $ 4x $, and the linear term $ -5x $ becomes $ -5 $. The constant $ 7 $ disappears since its derivative is zero. Let me know if you need further clarification!  \n\n**Sir, done!** 📚",
+          "score": 1.0,
+          "latency_ms": 3646.0,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_004",
+      "category": "mathematics",
+      "prompt": "What is the square root of 144?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4911.8
+        },
+        "C_orbit": {
+          "response": "Sir, the square root of 144 is 12. It's a straightforward calculation where 12 × 12 = 144. Let me confirm that for you!  \n\n**Hindi:**  \nSir, 144 के वर्गमूल 12 है। यह एक सरल संगत गणना है जिसमें 12 × 12 = 144 है। मैं इसे जाँच लेता हूँ!  \n\n**English:**  \nSir, the square root of 144 is 12. It's a straightforward calculation where 12 × 12 = 144. Let me confirm that for you!",
+          "score": 0,
+          "latency_ms": 3662.3,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_005",
+      "category": "mathematics",
+      "prompt": "If a pizza is cut into 8 equal slices and you eat 3, what fraction is left?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4847.2
+        },
+        "C_orbit": {
+          "response": "Sir, if a pizza is cut into 8 equal slices and 3 are eaten, 5 slices remain. The fraction left is 5/8. Sir, done! 🍕",
+          "score": 1.0,
+          "latency_ms": 2871.6,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_006",
+      "category": "mathematics",
+      "prompt": "What is the area of a circle with radius 7? Use pi = 22/7.",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4870.2
+        },
+        "C_orbit": {
+          "response": "Sir, the area of the circle is calculated using the formula $ \\pi r^2 $. With $ \\pi = \\frac{22}{7} $ and radius 7, the calculation is $ \\frac{22}{7} \\times 7 \\times 7 = 154 $. So, the area is **154 square units**.  \n\nDone! Let me know if you need help with anything else. 😊",
+          "score": 0.012987012987012991,
+          "latency_ms": 3043.0,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_007",
+      "category": "mathematics",
+      "prompt": "What is 15% of 240?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4904.2
+        },
+        "C_orbit": {
+          "response": "Sir, 15% of 240 is 36. Sir, done!",
+          "score": 0.41666666666666663,
+          "latency_ms": 2266.3,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_008",
+      "category": "mathematics",
+      "prompt": "A train travels at 60 mph for 2.5 hours. How far does it travel?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4821.0
+        },
+        "C_orbit": {
+          "response": "Sir, the train travels 150 miles.  \nIn Hindi: एक गाड़ी 60 मी/घंटा की गति से 2.5 घंटा तय करती है, तो यह 150 मील तय करती है।  \nDone!",
+          "score": 1.0,
+          "latency_ms": 3170.6,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_009",
+      "category": "mathematics",
+      "prompt": "What is the sum of the first 10 positive integers?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4856.1
+        },
+        "C_orbit": {
+          "response": "Sir, the sum of the first 10 positive integers is 55.  \nSir, done! 🎉",
+          "score": 0.18181818181818177,
+          "latency_ms": 3837.4,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_010",
+      "category": "mathematics",
+      "prompt": "Simplify: (3/4) x (8/9)",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4953.4
+        },
+        "C_orbit": {
+          "response": "Sir, the simplified result of (3/4) × (8/9) is **2/3**.  \n\nDone! 😊  \n**2/3** in Hindi: दो तिरेन तिरेन तिरेन.",
+          "score": 1.0,
+          "latency_ms": 3103.0,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_011",
+      "category": "mathematics",
+      "prompt": "What is the value of log base 2 of 64?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4901.8
+        },
+        "C_orbit": {
+          "response": "Sir, log base 2 of 64 is 6. Done! 😊  \nLog₂(64) = 6. ✅",
+          "score": 0.33333333333333337,
+          "latency_ms": 3475.0,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_012",
+      "category": "mathematics",
+      "prompt": "A rectangle has length 12 cm and width 5 cm. What is its diagonal?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4792.9
+        },
+        "C_orbit": {
+          "response": "Sir, the diagonal of the rectangle can be calculated using the Pythagorean theorem: $ \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13 $ cm.  \n\nDone! The diagonal is **13 cm**.",
+          "score": 0.9230769230769231,
+          "latency_ms": 3325.9,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_016",
+      "category": "mathematics",
+      "prompt": "What is the determinant of the matrix [[1,2],[3,4]]?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4861.4
+        },
+        "C_orbit": {
+          "response": "Sir, done! The determinant of the matrix [[1, 2], [3, 4]] is -2.  \nIn Hindi: द्विमान मैट्रिक्स [[1, 2], [3, 4]] के द्विक्रम निर्णायक -2 है।  \nIn English: The determinant of the matrix [[1, 2], [3, 4]] is -2.",
+          "score": 0,
+          "latency_ms": 3429.6,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "math_018",
+      "category": "mathematics",
+      "prompt": "If f(x) = 2x + 3, what is f(f(1))?",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4894.4
+        },
+        "C_orbit": {
+          "response": "Sir, done! The answer is 13. Let me break it down: f(1) = 2*1 + 3 = 5, then f(5) = 2*5 + 3 = 13. Simple enough! 😊",
+          "score": 1.0,
+          "latency_ms": 2638.2,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "code_001",
+      "category": "coding",
+      "prompt": "Write a Python function that checks if a string is a palindrome.",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4810.7
+        },
+        "C_orbit": {
+          "error": "timed out"
+        }
+      }
+    },
+    {
+      "id": "code_002",
+      "category": "coding",
+      "prompt": "Write a Python function that returns the Fibonacci sequence up to n terms.",
+      "baselines": {
+        "A_direct": {
+          "response": "ERROR: timed out",
+          "score": 0.0,
+          "latency_ms": 30001.5
+        },
+        "C_orbit": {
+          "response": "Sir, I've written a Python function to generate the Fibonacci sequence up to n terms. Here's the code:  \n\n```python\ndef fibonacci(n):\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    elif n == 2:\n        return [0, 1]\n    else:\n        fib = [0, 1]\n        for i in range(2, n):\n            fib.append(fib[i-1] + fib[i-2])\n        return fib\n```\n\n**Explanation:**  \n- For `n=0`, returns empty list.  \n- For `n=1`, returns `[0]`.  \n- For `n=2`, returns `[0, 1]`.  \n- For `n≥3`,",
+          "score": 0.0,
+          "latency_ms": 39068.6,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "code_003",
+      "category": "coding",
+      "prompt": "Write a Python function to find the longest common subsequence of two strings.",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4886.8
+        },
+        "C_orbit": {
+          "response": "Sir, I've written a Python function to find the longest common subsequence between two strings. It uses dynamic programming to efficiently compute the result. The function returns the length of the LCS, and here's the implementation:  \n\n```python\ndef longest_common_subsequence(str1, str2):\n    m, n = len(str1), len(str2)\n    dp = [[0]*(n+1) for _ in range(m+1)]\n    for i in range(1, m+1):\n        for j in range(1, n+1):\n            if str1[i-1] == str2[j-1]:\n                dp[i][j] = dp[i-1][j-",
+          "score": 0.0,
+          "latency_ms": 9969.5,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "code_004",
+      "category": "coding",
+      "prompt": "Write a Python function that reverses a linked list.",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4866.7
+        },
+        "C_orbit": {
+          "response": "🗑 List **shopping** delete kar di.",
+          "score": 0.0,
+          "latency_ms": 739.8,
+          "agent": "TAS",
+          "provider": "local"
+        }
+      }
+    },
+    {
+      "id": "code_005",
+      "category": "coding",
+      "prompt": "Write a Python function to merge two sorted arrays into one sorted array.",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 4822.7
+        },
+        "C_orbit": {
+          "error": "timed out"
+        }
+      }
+    },
+    {
+      "id": "code_006",
+      "category": "coding",
+      "prompt": "Explain the difference between a stack and a queue. Give a real-world analogy for each.",
+      "baselines": {
+        "A_direct": {
+          "response": "ERROR: timed out",
+          "score": 0.0,
+          "latency_ms": 30008.1
+        },
+        "C_orbit": {
+          "response": "Sir, a stack follows **LIFO** (Last In, First Out), like a cabinet where you put items on top and take the last one. A queue follows **FIFO** (First In, First Out), like a waiting line at a store where people enter and leave from the front.  \n\nStacks are like a stack of plates—you add to the top, remove from the top. Queues are like a line of customers—you join the front, serve from the front.  \n\nDone!",
+          "score": 1.0,
+          "latency_ms": 32834.0,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "code_007",
+      "category": "coding",
+      "prompt": "Write a Python function that counts the number of vowels in a string.",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 5037.3
+        },
+        "C_orbit": {
+          "response": "Sir, I've written a Python function to count vowels in a string. It converts the string to lowercase and checks each character against a set of vowels. The function returns the total count of vowels.  \n\n**English:**  \nSir, I've written a Python function to count vowels in a string. It converts the string to lowercase and checks each character against a set of vowels. The function returns the total count of vowels.  \n\n**Hindi:**  \nSir, मैं एक Python फ़ंक्शन बनाया है जो एक स्ट्रिंग में वॉल्व्स की ",
+          "score": 0.0,
+          "latency_ms": 7044.1,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    },
+    {
+      "id": "code_008",
+      "category": "coding",
+      "prompt": "Write a Python function that checks if a number is prime.",
+      "baselines": {
+        "A_direct": {
+          "response": "",
+          "score": 0.0,
+          "latency_ms": 5024.5
+        },
+        "C_orbit": {
+          "response": "Sure! Here's a Python function to check if a number is prime:\n\n```python\ndef is_prime(n):\n    if n < 2:\n        return False\n    if n == 2:\n        return True\n    if n % 2 == 0:\n        return False\n    for i in range(3, int(n**0.5) + 1, 2):\n        if n % i == 0:\n            return False\n    return True\n```\n\n**Explanation:**  \n- Handles numbers < 2 (not prime).  \n- Special case for 2 (prime).  \n- Even numbers > 2 are immediately excluded.  \n- Checks divisors from 3 up to √n, stepping by 2 (opt",
+          "score": 0.0,
+          "latency_ms": 8567.3,
+          "agent": "QUEEN",
+          "provider": "ollama"
+        }
+      }
+    }
+  ],
+  "delta": {
+    "absolute": 0.442,
+    "relative_pct": 359.4,
+    "verdict": "IMPROVEMENT"
+  },
+  "elapsed_seconds": 680.92,
+  "status": "completed"
+}

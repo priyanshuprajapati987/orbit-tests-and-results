@@ -1,0 +1,72 @@
+{
+  "validation_date": "2026-09-19",
+  "model": "qwen3:1.7b",
+  "server": "ORBIT v3.7.0",
+
+  "quick_validation": {
+    "tasks": 10,
+    "direct_accuracy": 0.80,
+    "orbit_accuracy": 0.80,
+    "direct_latency_avg": 10.1,
+    "orbit_latency_avg": 18.2,
+    "orbit_overhead": "1.8x",
+    "conclusion": "Same accuracy, ORBIT adds ~1.8x latency for routing + system prompt overhead"
+  },
+
+  "tool_reality_test": {
+    "tasks": 10,
+    "task_success_rate": 0.50,
+    "step_success_rate": 0.19,
+    "total_steps": 26,
+    "passed_steps": 5,
+    "issues": [
+      "File creation: ORBIT responds 'created' but files don't exist on disk",
+      "File edit: Same issue - chat API not executing tool calls",
+      "Code generation: File not saved despite response saying it was",
+      "Multi-step tasks: Response doesn't contain expected keywords",
+      "System info: Partial match only"
+    ],
+    "working": [
+      "list_processes: PASS",
+      "list_files: PASS",
+      "clipboard_operations: PASS",
+      "file_search: PASS",
+      "file_delete: PASS"
+    ],
+    "conclusion": "Read-only tools work (5/5), write tools fail (0/5). Chat API not executing file write tool calls."
+  },
+
+  "quality_gate": {
+    "status": "partial - timeout on some tasks",
+    "sample_results": [
+      "qg_001: Direct=0.70, ORBIT=0.50 (ORBIT shorter responses)",
+      "qg_002: Direct=0.90, ORBIT=0.90 (code generation equal)",
+      "qg_003: ORBIT ERROR on explanation task"
+    ],
+    "conclusion": "ORBIT quality gate working for code, struggles with explanations"
+  },
+
+  "full_pipeline": {
+    "status": "partial - 5/60 tasks completed before timeout",
+    "sample": [
+      "Task 1: Direct=0.00, ORBIT=1.00 (ORBIT wins)",
+      "Task 2: Direct=1.00, ORBIT=1.00 (tie)",
+      "Task 3: Direct=1.00, ORBIT=1.00 (tie)",
+      "Task 4: Direct=0.14, ORBIT=0.00 (both fail)"
+    ],
+    "conclusion": "ORBIT routing works correctly when it responds, but slow (20s+ per task)"
+  },
+
+  "summary": {
+    "accuracy_comparison": "Direct Ollama 80% = ORBIT 80% (same model, same accuracy)",
+    "latency_overhead": "ORBIT adds 1.8x latency (routing + system prompt + processing)",
+    "tool_execution": "READ-ONLY tools work, WRITE tools broken (chat API issue)",
+    "key_finding": "ORBIT's value is in routing/intelligence layer, not in raw accuracy. Write tool execution needs fixing.",
+    "recommendations": [
+      "Fix chat API file write tool execution",
+      "Reduce ORBIT overhead (cache system prompt, optimize routing)",
+      "Add retry logic for Ollama timeouts",
+      "Consider using qwen3:1.7b as default (faster, same accuracy)"
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "timestamp": "2026-09-18T17:01:32.935745",
+  "breaking_point": 110,
+  "max_rps": 1082.9,
+  "results": [
+    {
+      "users": 10,
+      "total_requests": 157,
+      "rps": 15.7,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 993.2,
+      "p50_ms": 19.6,
+      "p95_ms": 12134.8,
+      "p99_ms": 12229.5
+    },
+    {
+      "users": 30,
+      "total_requests": 1087,
+      "rps": 108.7,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 425.6,
+      "p50_ms": 17.4,
+      "p95_ms": 152.3,
+      "p99_ms": 12232.1
+    },
+    {
+      "users": 50,
+      "total_requests": 4160,
+      "rps": 416.0,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 182.5,
+      "p50_ms": 27.4,
+      "p95_ms": 133.6,
+      "p99_ms": 6236.8
+    },
+    {
+      "users": 70,
+      "total_requests": 4839,
+      "rps": 483.9,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 197.6,
+      "p50_ms": 63.3,
+      "p95_ms": 170.2,
+      "p99_ms": 6222.4
+    },
+    {
+      "users": 90,
+      "total_requests": 4702,
+      "rps": 470.2,
+      "errors": 0,
+      "error_rate": 0.0,
+      "avg_ms": 248.3,
+      "p50_ms": 110.2,
+      "p95_ms": 224.7,
+      "p99_ms": 6269.7
+    },
+    {
+      "users": 110,
+      "total_requests": 10829,
+      "rps": 1082.9,
+      "errors": 10603,
+      "error_rate": 97.9,
+      "avg_ms": 103.0,
+      "p50_ms": 86.3,
+      "p95_ms": 171.1,
+      "p99_ms": 258.9
+    }
+  ]
+}

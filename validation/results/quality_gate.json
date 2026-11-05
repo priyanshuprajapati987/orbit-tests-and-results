@@ -1,0 +1,337 @@
+{
+  "experiment": "Quality Gate",
+  "description": "Does the quality gate improve responses?",
+  "orbit_running": true,
+  "tasks": [
+    {
+      "id": "qg_001",
+      "type": "short_answer",
+      "direct": {
+        "response": "The result of 2 + 2 is **4**. \n\nThis is a simple arithmetic operation where two numbers are added together. In this case, 2 + 2 equals 4.",
+        "analysis": {
+          "length": 137,
+          "word_count": 28,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7
+        },
+        "latency_ms": 1613.1
+      },
+      "orbit_on": {
+        "response": "Sir, 2+2 is 4. Done!  \nSir, 2+2 बराबर 4 है। अंतिम जवाब दिया गया।",
+        "analysis": {
+          "length": 64,
+          "word_count": 14,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7
+        },
+        "latency_ms": 357.6
+      }
+    },
+    {
+      "id": "qg_002",
+      "type": "code_generation",
+      "direct": {
+        "response": "To add two numbers in Python, we can define a simple function that takes two parameters and returns their sum. This function assumes that the inputs are numeric (either integers or floats), and it will perform the addition directly.\n\n---\n\n### ✅ Function Definition\n\n```python\ndef add_numbers(a,",
+        "analysis": {
+          "length": 294,
+          "word_count": 47,
+          "has_code": true,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.8999999999999999
+        },
+        "latency_ms": 4952.8
+      },
+      "orbit_on": {
+        "response": "Sir, done! Here's the function:  \n```python  \ndef add_numbers(a, b):  \n    return a + b  \n```  \nLet me know if you need adjustments! 😊",
+        "analysis": {
+          "length": 134,
+          "word_count": 22,
+          "has_code": true,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.8999999999999999
+        },
+        "latency_ms": 2101.0
+      }
+    },
+    {
+      "id": "qg_003",
+      "type": "explanation",
+      "direct": {
+        "response": "",
+        "analysis": {
+          "length": 0,
+          "word_count": 0,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": true,
+          "is_very_short": true,
+          "is_very_long": false,
+          "quality_score": 0
+        },
+        "latency_ms": 4861.3
+      },
+      "orbit_on": {
+        "response": "Sir, quantum computing uses qubits that can hold multiple states at once, like a supercharged calculator, enabling it to solve complex problems faster than traditional computers. It's like having a magic tool that can explore countless possibilities simultaneously, making it perfect for tasks like breaking codes or simulating molecules.  \n\nSir, done! 🌌",
+        "analysis": {
+          "length": 354,
+          "word_count": 52,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7
+        },
+        "latency_ms": 2314.7
+      }
+    },
+    {
+      "id": "qg_004",
+      "type": "analysis",
+      "direct": {
+        "response": "",
+        "analysis": {
+          "length": 0,
+          "word_count": 0,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": true,
+          "is_very_short": true,
+          "is_very_long": false,
+          "quality_score": 0
+        },
+        "latency_ms": 4863.4
+      },
+      "orbit_on": {
+        "response": "Sir, microservices offer scalability, flexibility, and independent deployment but face challenges like complexity, debugging overhead, and increased operational costs. Done! 🚀  \nSir, pros include scalability and agility, while cons involve increased complexity and maintenance effort. Done! 🧠",
+        "analysis": {
+          "length": 292,
+          "word_count": 37,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7
+        },
+        "latency_ms": 3225.2
+      }
+    },
+    {
+      "id": "qg_005",
+      "type": "debugging",
+      "direct": {
+        "response": "To help debug the",
+        "analysis": {
+          "length": 17,
+          "word_count": 4,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": true,
+          "is_very_long": false,
+          "quality_score": 0.3
+        },
+        "latency_ms": 4981.0
+      },
+      "orbit_on": {
+        "response": "Sir, the ImportError usually means the module isn't installed or the path is wrong. Check if the package is installed with `pip install` and ensure the import statement is correct. Run `pip list` to confirm. If it's missing, install it first. Let me know if you need help with the installation!  \n\nSir, done! The ImportError is resolved. The module was installed correctly, and the import path was adjusted. Let me know if you face any other issues!",
+        "analysis": {
+          "length": 449,
+          "word_count": 77,
+          "has_code": true,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7
+        },
+        "latency_ms": 3863.4
+      }
+    },
+    {
+      "id": "qg_006",
+      "type": "creative",
+      "direct": {
+        "response": "",
+        "analysis": {
+          "length": 0,
+          "word_count": 0,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": true,
+          "is_very_short": true,
+          "is_very_long": false,
+          "quality_score": 0
+        },
+        "latency_ms": 4996.5
+      },
+      "orbit_on": {
+        "response": "Sir, here's a haiku:  \nCode flows through circuits,  \nAI evolves, mirroring human thought,  \nBoundless in logic.  \n\n(English & Hindi translation:  \nकोड चलता है चिप्स में,  \nएआई विकसित होता है, शारीरिक विचार अनुसरण करता है,  \nसीमित नहीं है लॉजिक में.)",
+        "analysis": {
+          "length": 250,
+          "word_count": 39,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7
+        },
+        "latency_ms": 3874.0
+      }
+    },
+    {
+      "id": "qg_007",
+      "type": "factual",
+      "direct": {
+        "response": "",
+        "analysis": {
+          "length": 0,
+          "word_count": 0,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": true,
+          "is_very_short": true,
+          "is_very_long": false,
+          "quality_score": 0
+        },
+        "latency_ms": 4945.8
+      },
+      "orbit_on": {
+        "response": "🧮 Samajh nahi aaya. Try: 'calculate 25*4', '15% of 200', '100 usd to inr', '5 feet to meters'.",
+        "analysis": {
+          "length": 94,
+          "word_count": 18,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7
+        },
+        "latency_ms": 36.9
+      }
+    },
+    {
+      "id": "qg_008",
+      "type": "structured",
+      "direct": {
+        "response": "- **Improves Physical Health:** Exercise strengthens the heart, boosts immunity, and reduces risks of chronic diseases like diabetes and hypertension.  \n- **Enhances Mental Well-being:** It releases endorphins, reduces stress, and improves mood, fostering better emotional resilience.  \n- **Boosts Longevity and Quality of Life:** Regular activity increases lifespan, improves cognitive function, and enhances overall life satisfaction.",
+        "analysis": {
+          "length": 436,
+          "word_count": 55,
+          "has_code": false,
+          "has_list": true,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7999999999999999
+        },
+        "latency_ms": 2098.5
+      },
+      "orbit_on": {
+        "response": "Sir, here are the benefits of exercise in 3 bullet points:  \n- **Improves cardiovascular health** (boosts heart function and circulation).  \n- **Strengthens muscles and bones** (prevents injuries and supports mobility).  \n- **Enhances mental well-being** (reduces stress, boosts mood, and improves sleep).  \n\nDone! 🏋️‍♂️💪🧠",
+        "analysis": {
+          "length": 322,
+          "word_count": 43,
+          "has_code": false,
+          "has_list": true,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7999999999999999
+        },
+        "latency_ms": 2711.2
+      }
+    },
+    {
+      "id": "qg_009",
+      "type": "conversion",
+      "direct": {
+        "response": "",
+        "analysis": {
+          "length": 0,
+          "word_count": 0,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": true,
+          "is_very_short": true,
+          "is_very_long": false,
+          "quality_score": 0
+        },
+        "latency_ms": 5093.3
+      },
+      "orbit_on": {
+        "response": "Sir, done! 100 USD is approximately 93 EUR based on the current exchange rate. Let me know if you need further assistance!",
+        "analysis": {
+          "length": 122,
+          "word_count": 22,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7
+        },
+        "latency_ms": 2230.6
+      }
+    },
+    {
+      "id": "qg_010",
+      "type": "comparison",
+      "direct": {
+        "response": "",
+        "analysis": {
+          "length": 0,
+          "word_count": 0,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": true,
+          "is_very_short": true,
+          "is_very_long": false,
+          "quality_score": 0
+        },
+        "latency_ms": 5242.5
+      },
+      "orbit_on": {
+        "response": "🧮 Samajh nahi aaya. Try: 'calculate 25*4', '15% of 200', '100 usd to inr', '5 feet to meters'.",
+        "analysis": {
+          "length": 94,
+          "word_count": 18,
+          "has_code": false,
+          "has_list": false,
+          "is_empty": false,
+          "is_very_short": false,
+          "is_very_long": false,
+          "quality_score": 0.7
+        },
+        "latency_ms": 33.1
+      }
+    }
+  ],
+  "summary": {
+    "direct_mean_quality": 0.27,
+    "orbit_mean_quality": 0.73,
+    "direct_mean_latency": 4364.8,
+    "orbit_mean_latency": 2074.8,
+    "tasks_with_quality_gate": 7,
+    "tasks_without_improvement": 3
+  },
+  "elapsed_seconds": 74.44,
+  "status": "completed"
+}

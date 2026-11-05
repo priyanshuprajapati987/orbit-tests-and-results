@@ -1,0 +1,231 @@
+"""
+Battle Prompt Suite (120 items) for the real ChatGPT A/B benchmark.
+
+Categories (20 each x 6 = 120):
+  reasoning  - step-by-step logical/math problems
+  coding     - code generation + debugging
+  creative   - writing / ideation
+  facts      - factual questions
+  math       - computation + word problems
+  multi_turn - conversation chains (list of 3+ turns; run via compare_multiturn)
+
+Used by `battle_chatgpt.py` (repo root) and `BenchmarkEngine.compare_batch`.
+"""
+
+BATTLE_PROMPTS = {
+    "reasoning": [
+        "Solve: 2x + 5 = 13. Show your step-by-step working.",
+        "If Alice is 5 years older than Bob, and Bob is 3 years older than Carol, and Carol is 20, how old is Alice? Explain.",
+        "You have 3 boxes. One contains only apples, one only oranges, one both. All labels are wrong. Pick one box and one fruit to determine all contents. Explain.",
+        "A farmer has chickens and cows, 30 heads and 74 legs total. How many of each? Show reasoning.",
+        "Is the following argument valid? Premise: All dogs are mammals. Premise: All mammals are animals. Conclusion: Therefore all dogs are animals. Explain why or why not.",
+        "A train leaves station A at 60 mph. Two hours later another leaves station B, 300 miles away, at 90 mph toward A. When do they meet?",
+        "Explain the Monty Hall problem and why switching wins 2/3 of the time.",
+        "Which is larger, 2^100 or 100^2? Prove your answer without computing exact values.",
+        "A clock shows 3:15. What is the angle between the hour and minute hands?",
+        "If it takes 5 machines 5 minutes to make 5 widgets, how long does it take 100 machines to make 100 widgets?",
+        "You flip 3 coins. What is the probability of exactly 2 heads? Show your work.",
+        "Complete the sequence and explain: 2, 6, 12, 20, 30, ?",
+        "A bat and a ball cost $1.10 total. The bat costs $1 more than the ball. How much is the ball?",
+        "Reverse the following: if a statement is true, its contrapositive is true. Explain what this means.",
+        "Classify each number as rational or irrational with justification: pi, sqrt(4), 0.333..., 22/7, sqrt(2).",
+        "Water is poured at 2 liters/min into a tank that leaks 0.5 liters/min. Tank holds 30 liters. When is it full?",
+        "What day of the week was January 1, 2000? Explain how you computed it.",
+        "A rope ladder hangs from a boat. The rungs are 1 foot apart and 10 feet of ladder is above water. Tide rises 2 feet. How much of the ladder is above water?",
+        "There are 8 balls, one is heavier. Using a balance scale, find the heavy ball in minimum weighings. Explain.",
+        "If all Zobs are Blubs, and some Blubs are Wibbles, can we conclude some Zobs are Wibbles? Defend your answer.",
+    ],
+    "coding": [
+        "Write a Python function to reverse a string in place.",
+        "Write a Python function to check if a string is a palindrome.",
+        "Write a function that returns the nth Fibonacci number (no recursion limit issues).",
+        "Write Python code to find the most common word in a text file, ignoring stop words.",
+        "Write a SQL query to find employees earning more than their manager.",
+        "Explain the difference between list, tuple, set, and dict in Python with examples.",
+        "Write a Python decorator that measures and logs function execution time.",
+        "Write a generator function that yields prime numbers indefinitely.",
+        "Fix this bug: def average(nums): return sum(nums) / len(nums) if len(nums) else None — what happens with an empty list? Write the robust version.",
+        "Write Python code to merge two sorted lists into one sorted list.",
+        "Write a function to check balanced parentheses in a string.",
+        "Explain what this does: lambda x: x[::-1] — and give three use cases.",
+        "Write a Python class implementing a simple LRU cache.",
+        "What is a closure? Write a counter function using one.",
+        "Write a SQL query to find duplicate emails in a users table.",
+        "Write Python to parse a CSV without the csv module.",
+        "Write a function flatten(nested_list) that flattens arbitrarily nested lists.",
+        "Explain the difference between == and is in Python with examples.",
+        "Write a binary search function and explain its time complexity.",
+        "Write Python code to read a file line by line and count word frequencies.",
+    ],
+    "creative": [
+        "Write a haiku about quantum computing.",
+        "Describe a cyberpunk city in exactly 100 words.",
+        "Write a short story (5 sentences) about an AI that dreams.",
+        "Invent a new holiday and describe how people celebrate it.",
+        "Write a persuasive paragraph convincing someone to learn to code.",
+        "Create a name and tagline for a coffee shop that serves 24/7.",
+        "Write a letter from the year 2100 to someone in 2026.",
+        "Write a poem about the internet, at least 8 lines.",
+        "Design a product that solves procrastination. Name it and describe 3 features.",
+        "Write a news headline + opening sentence for an event in 2040.",
+        "Write a dialogue between a robot and a cat (6 lines).",
+        "Invent a sport and explain its rules in 50 words.",
+        "Write a metaphor for coding: 'Coding is like ___' and explain.",
+        "Create a superhero whose power is bad luck. Describe their origin in 3 sentences.",
+        "Write an ad slogan for a time machine (3 options).",
+        "Describe your ideal workspace in 80 words.",
+        "Write a recipe for 'friendship' as if it were a dish.",
+        "Write a haiku about debugging at 3am.",
+        "Give the moon a personality and write its 5-word daily diary entry.",
+        "Write a title and logline for a movie about a sentient toaster.",
+    ],
+    "facts": [
+        "What is the capital of Australia?",
+        "When did World War 2 begin and end?",
+        "Who wrote the play 'Romeo and Juliet'?",
+        "What is the largest planet in our solar system?",
+        "What element has the symbol 'Au'?",
+        "How many continents are there? Name them.",
+        "What is the tallest mountain on Earth (above sea level)?",
+        "Who was the first person to walk on the Moon?",
+        "What is the boiling point of water at sea level in Celsius?",
+        "Which country gifted the Statue of Liberty to the US?",
+        "What is the currency of Japan?",
+        "Who painted the Mona Lisa?",
+        "What is the speed of light in a vacuum (approx, in m/s)?",
+        "Which organ pumps blood around the body?",
+        "What is the largest ocean on Earth?",
+        "In which year did humans first land on the Moon?",
+        "What is the chemical formula for table salt?",
+        "Who developed the theory of general relativity?",
+        "What is the largest desert on Earth?",
+        "How many bones does an adult human have (approx)?",
+    ],
+    "math": [
+        "Compute 17 * 23 and show two different methods.",
+        "What is the derivative of x^3 - 5x + 7?",
+        "Solve for x: x^2 - 6x + 9 = 0.",
+        "What is the integral from 0 to 1 of 3x^2 dx?",
+        "Simplify: (x^2 - 1) / (x - 1) for x != 1.",
+        "What is 15% of 240?",
+        "Find the greatest common divisor of 84 and 126.",
+        "What is the area of a circle with radius 7? (Use pi = 22/7).",
+        "What is the slope of the line through (1,2) and (3,6)?",
+        "If log2(8) = ? and log10(1000) = ?, what are they?",
+        "Sum of the first 50 natural numbers? Show the formula.",
+        "What is the value of sin(30 degrees)?",
+        "Convert 1011 (binary) to decimal.",
+        "What is the square root of 169?",
+        "How many factors does 36 have? List them.",
+        "The probability of heads is 1/2. What is the probability of at least one head in 3 flips?",
+        "What is 7! (7 factorial)?",
+        "If y = 2x + 3 and x = 4, what is y?",
+        "Simplify sqrt(50).",
+        "What is the 10th term of the arithmetic sequence 3, 7, 11, 15...?",
+    ],
+    "multi_turn": [
+        [
+            "I'm trying to understand recursion. What is recursion?",
+            "Give me a simple Python example of recursion.",
+            "What happens if the base case is missing? Explain with my example.",
+        ],
+        [
+            "What is the difference between HTTP and HTTPS?",
+            "Why does HTTPS matter for security?",
+            "How can I tell if a website is using HTTPS?",
+        ],
+        [
+            "Plan a weekend trip to a beach town.",
+            "I only have a small budget. How do we keep it cheap?",
+            "What should we pack for the beach weekend?",
+        ],
+        [
+            "Explain what a database index is.",
+            "Why would a query be slow without an index?",
+            "When should I avoid adding an index?",
+        ],
+        [
+            "Write a recipe for chocolate chip cookies.",
+            "Can I substitute butter with oil?",
+            "How do I know when they are done baking?",
+        ],
+        [
+            "What causes tides on Earth?",
+            "Why are there two high tides a day?",
+            "How do the sun and moon combine to affect tide size?",
+        ],
+        [
+            "How do I start learning guitar?",
+            "Which guitar should a beginner buy?",
+            "How long should I practice every day?",
+        ],
+        [
+            "What is the capital of Australia and its population?",
+            "Which city in Australia is the largest?",
+            "Is Sydney or Melbourne better to live in? Summarize the trade-offs.",
+        ],
+        [
+            "Explain the concept of machine learning in simple terms.",
+            "What is the difference between supervised and unsupervised learning?",
+            "Give one real-world example of each type.",
+        ],
+        [
+            "What is photosynthesis?",
+            "Which part of the plant does it happen in?",
+            "Why is it important for the food chain?",
+        ],
+        [
+            "Help me write a cover letter for a software engineer job.",
+            "Make it more concise and punchy.",
+            "Add a line about my React and Python experience.",
+        ],
+        [
+            "What is inflation?",
+            "How does inflation affect my savings?",
+            "What can I do to protect my money from inflation?",
+        ],
+        [
+            "Explain how a VPN works.",
+            "Is using a VPN legal?",
+            "When should I definitely use one?",
+        ],
+        [
+            "How does a fridge keep food cold?",
+            "Why does it need to be kept clean?",
+            "What happens if the door seal is broken?",
+        ],
+        [
+            "What are the benefits of meditation?",
+            "How do I start a simple daily practice?",
+            "How long until I notice effects?",
+        ],
+        [
+            "Explain what REST API means.",
+            "What is the difference between GET and POST?",
+            "When should I use PUT instead of POST?",
+        ],
+        [
+            "What is blockchain?",
+            "How does a transaction get verified?",
+            "What are the downsides of blockchain?",
+        ],
+        [
+            "Describe the plot of a movie where AI becomes self-aware.",
+            "What is the central conflict?",
+            "How does the movie end — heroically or tragically?",
+        ],
+        [
+            "What should I eat before a workout?",
+            "What about after the workout?",
+            "How much water should I drink during exercise?",
+        ],
+        [
+            "What is the difference between a meteor, meteorite, and meteoroid?",
+            "When is the next major meteor shower?",
+            "Where is the best place to view it?",
+        ],
+    ],
+}
+
+CATEGORY_COUNTS = {name: len(prompts) for name, prompts in BATTLE_PROMPTS.items()}
+TOTAL_PROMPTS = sum(CATEGORY_COUNTS.values())

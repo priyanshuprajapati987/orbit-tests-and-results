@@ -1,0 +1,11 @@
+[1/10] D=1(15s) O=1(23s) math
+[2/10] D=1(9s) O=1(28s) facts
+[3/10] D=1(16s) O=1(30s) facts
+[4/10] D=1(14s) O=1(28s) facts
+[5/10] D=0(18s) O=0(60s) math
+[6/10] D=1(20s) O=0(60s) geography
+[7/10] D=1(20s) O=0(60s) science
+[8/10] D=0(28s) O=0(20s) science
+[9/10] D=1(11s) O=0(22s) general
+[10/10] D=1(9s) O=1(20s) general
+DONE

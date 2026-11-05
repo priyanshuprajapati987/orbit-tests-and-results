@@ -1,0 +1,121 @@
+{
+  "tasks": [
+    {
+      "q": "What is 2+2?",
+      "expected": "4",
+      "cat": "math",
+      "direct_score": 1.0,
+      "direct_latency": 7.3,
+      "orbit_score": 1.0,
+      "orbit_latency": 17.5,
+      "direct_text": "The answer is 4.",
+      "orbit_text": "2+2 equals 4."
+    },
+    {
+      "q": "Capital of France?",
+      "expected": "paris",
+      "cat": "facts",
+      "direct_score": 1.0,
+      "direct_latency": 9.7,
+      "orbit_score": 1.0,
+      "orbit_latency": 17.7,
+      "direct_text": "The capital of France is **Paris**. \n\nParis has been the capital of France since the 10th century and remains the largest city in the country. It is a major cultural, economic, and political hub, home",
+      "orbit_text": "The capital of France is Paris."
+    },
+    {
+      "q": "Red planet?",
+      "expected": "mars",
+      "cat": "facts",
+      "direct_score": 1.0,
+      "direct_latency": 10.5,
+      "orbit_score": 1.0,
+      "orbit_latency": 18.9,
+      "direct_text": "The term **\"Red Planet\"** refers to **Mars**, which is called the red planet due to its distinctive reddish appearance. Here's why:\n\n### 1. **Color Origin**  \n   - Mars' surface is covered with **iron",
+      "orbit_text": "Mars is known as the Red Planet due to its reddish appearance from iron oxide on its surface."
+    },
+    {
+      "q": "Who wrote Hamlet?",
+      "expected": "shakespeare",
+      "cat": "facts",
+      "direct_score": 1.0,
+      "direct_latency": 9.1,
+      "orbit_score": 1.0,
+      "orbit_latency": 17.3,
+      "direct_text": "The play *Hamlet* was written by **William Shakespeare** around 1600. It is one of the most renowned tragedies in English literature. The original title was *Hamlet* (later changed to *Hamlet* by the ",
+      "orbit_text": "William Shakespeare wrote Hamlet."
+    },
+    {
+      "q": "Square root of 16?",
+      "expected": "4",
+      "cat": "math",
+      "direct_score": 0.0,
+      "direct_latency": 11.4,
+      "orbit_score": 1.0,
+      "orbit_latency": 17.8,
+      "direct_text": "",
+      "orbit_text": "The square root of 16 is 4."
+    },
+    {
+      "q": "Largest ocean?",
+      "expected": "pacific",
+      "cat": "geography",
+      "direct_score": 1.0,
+      "direct_latency": 10.6,
+      "orbit_score": 1.0,
+      "orbit_latency": 21.7,
+      "direct_text": "The **largest ocean** on Earth is the **Pacific Ocean**. It covers approximately **63.16 million square kilometers** (about 24.5 million square miles), making it the largest body of water globally. He",
+      "orbit_text": "The largest ocean is the Pacific Ocean, covering approximately 63 million square miles (165 million square kilometers)."
+    },
+    {
+      "q": "What is H2O?",
+      "expected": "water",
+      "cat": "science",
+      "direct_score": 1.0,
+      "direct_latency": 10.6,
+      "orbit_score": 1.0,
+      "orbit_latency": 19.1,
+      "direct_text": "**H2O** is the chemical formula for **water**, a vital compound essential for life on Earth. Here's a breakdown of what it is:\n\n### 1. **Structure**  \n- **Composition**: H\u2082O consists of **2 hydrogen a",
+      "orbit_text": "H2O is the chemical formula for water, consisting of two hydrogen atoms and one oxygen atom."
+    },
+    {
+      "q": "Speed of light?",
+      "expected": "299792458",
+      "cat": "science",
+      "direct_score": 0.0,
+      "direct_latency": 10.6,
+      "orbit_score": 0.0,
+      "orbit_latency": 18.0,
+      "direct_text": "",
+      "orbit_text": "The speed of light in a vacuum is approximately 299,792 kilometers per second."
+    },
+    {
+      "q": "How many continents?",
+      "expected": "7",
+      "cat": "general",
+      "direct_score": 1.0,
+      "direct_latency": 10.5,
+      "orbit_score": 0.0,
+      "orbit_latency": 17.5,
+      "direct_text": "The traditional answer is **seven continents**, as follows:\n\n1. **Africa**  \n2. **Antarctica**  \n3. **Asia**  \n4. **Europe**  \n5. **North America**  \n6. **South America**  \n7. **Oceania**  \n\n### Key P",
+      "orbit_text": "There are seven generally recognized continents on Earth: Africa, Antarctica, Asia, Australia, Europe, North America, and South America."
+    },
+    {
+      "q": "What color is snow?",
+      "expected": "white",
+      "cat": "general",
+      "direct_score": 1.0,
+      "direct_latency": 10.4,
+      "orbit_score": 1.0,
+      "orbit_latency": 16.1,
+      "direct_text": "Snow is typically **white**. This is due to the way light interacts with the structure of snowflakes. When sunlight hits snow, the light is scattered by the tiny ice crystals in the snowflakes, and th",
+      "orbit_text": "Snow appears white due to the way light scatters through ice crystals."
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "direct_score": 0.8,
+    "orbit_score": 0.8,
+    "direct_latency": 10.066799902915955,
+    "orbit_latency": 18.167800402641298
+  }
+}

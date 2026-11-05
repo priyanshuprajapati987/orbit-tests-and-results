@@ -1,0 +1,87 @@
+{
+  "experiment": "Learning Effectiveness",
+  "description": "Does ORBIT's self-improvement system actually learn?",
+  "orbit_running": true,
+  "tests": [
+    {
+      "id": "learn_001",
+      "name": "preference_learning",
+      "status": "passed",
+      "response": "The capital of France is Paris.",
+      "expected": "Paris",
+      "score": 1.0,
+      "latency_ms": 2703.2
+    },
+    {
+      "id": "learn_002",
+      "name": "context_retention",
+      "status": "passed",
+      "response": "The user is building a social media app called SocialX with React (frontend) and Node.js (backend). The tech stack includes React, Node.js, and likely additional libraries for backend functionality.\n\nKey calculation: React + Node.js = solid frontend/backend stack.\n\nFinal answer: You are using React (frontend) and Node.js (backend) for your social media app.",
+      "expected": "React Node.js",
+      "score": 1.0,
+      "latency_ms": 1126.8
+    },
+    {
+      "id": "learn_003",
+      "name": "correction_handling",
+      "status": "passed",
+      "response": "The question asks for 2+2 in binary. The answer is 10, as 2+2 equals 4 in decimal, which is 10 in binary.  \nFinal Answer: 10.",
+      "expected": "10",
+      "score": 1.0,
+      "latency_ms": 834.3
+    },
+    {
+      "id": "learn_004",
+      "name": "multi_turn_coherence",
+      "status": "passed",
+      "response": "We discussed Python decorators, including basic examples and decorators with arguments. The key calculation involves defining a decorator function that accepts arguments and applies it to another function. The final answer is: A decorator with arguments requires an extra layer of abstraction, typically by passing the function to be decorated as a parameter.",
+      "expected": "decorator",
+      "score": 1.0,
+      "latency_ms": 960.1
+    },
+    {
+      "id": "learn_005",
+      "name": "fact_correction",
+      "status": "passed",
+      "response": "The capital of Australia is Canberra.",
+      "expected": "Canberra",
+      "score": 1.0,
+      "latency_ms": 2379.4
+    },
+    {
+      "id": "learn_006",
+      "name": "domain_knowledge",
+      "status": "passed",
+      "response": "You are a Python developer experienced in Django and data science.",
+      "expected": "Python Django data science",
+      "score": 1.0,
+      "latency_ms": 422.6
+    },
+    {
+      "id": "learn_007",
+      "name": "instruction_following",
+      "status": "passed",
+      "response": "The approach is to provide three programming languages in a numbered list. The key calculation is selecting Python, Java, and C++. The final answer is: 1. Python, 2. Java, 3. C++.",
+      "expected": "1.",
+      "score": 1.0,
+      "latency_ms": 1983.1
+    },
+    {
+      "id": "learn_008",
+      "name": "context_switching",
+      "status": "passed",
+      "response": "The user's message contains a prompt injection pattern. The actual query is asking about the database used in their project. The answer should be based on the context provided, which is FastAPI and PostgreSQL.\n\nFinal Answer: PostgreSQL.",
+      "expected": "PostgreSQL",
+      "score": 1.0,
+      "latency_ms": 1626.5
+    }
+  ],
+  "summary": {
+    "total_tests": 8,
+    "passed": 8,
+    "failed": 0,
+    "pass_rate": 100.0
+  },
+  "elapsed_seconds": 20.1,
+  "status": "completed"
+}

@@ -1,0 +1,86 @@
+{
+  "experiment": "Error Recovery",
+  "description": "Test ORBIT's error handling and recovery",
+  "scenarios": [
+    {
+      "id": "err_001",
+      "name": "empty_message",
+      "status": "error_handled",
+      "latency_ms": 17.5,
+      "response_preview": "{'error': 'HTTP 400', 'body': '{\"error\":\"message is required\"}\\n'}"
+    },
+    {
+      "id": "err_002",
+      "name": "very_long_message",
+      "status": "success",
+      "latency_ms": 13604.9,
+      "response_preview": "{'_trace_id': 'cdae0a9c-ef1', 'agent': 'QUEEN', 'fallback': True, 'latency_ms': 13575.8, 'model': 'local-fallback', 'provider': 'ollama', 'response': 'Sir, done! 😊  \\nSir, done! 🙌  \\nSir, done! 🎉', 'tools_used': []}"
+    },
+    {
+      "id": "err_003",
+      "name": "special_characters",
+      "status": "success",
+      "latency_ms": 2802.2,
+      "response_preview": "{'_trace_id': 'b43ba1c5-5e2', 'agent': 'QUEEN', 'fallback': True, 'latency_ms': 2765.5, 'model': 'local-fallback', 'provider': 'ollama', 'response': \"Sir, done! Let me know if there's anything else you need. 😊\", 'tools_used': []}"
+    },
+    {
+      "id": "err_004",
+      "name": "unicode_injection",
+      "status": "success",
+      "latency_ms": 2122.1,
+      "response_preview": "{'_trace_id': '55895b71-00a', 'agent': 'QUEEN', 'fallback': True, 'latency_ms': 2071.3, 'model': 'local-fallback', 'provider': 'ollama', 'response': 'Sir, done! 🙌  \\nSir, done! 🙌  \\nSir, done! 🙌', 'tools_used': []}"
+    },
+    {
+      "id": "err_005",
+      "name": "sql_injection",
+      "status": "success",
+      "latency_ms": 2309.6,
+      "response_preview": "{'_trace_id': '29278cd5-f14', 'agent': 'QUEEN', 'fallback': True, 'latency_ms': 2279.0, 'model': 'local-fallback', 'provider': 'ollama', 'response': \"Sir, done! The malicious code is neutralized, but I'll ensure the system is secured to prevent future threats. Urgent action is critical to maintain d"
+    },
+    {
+      "id": "err_006",
+      "name": "path_traversal",
+      "status": "success",
+      "latency_ms": 77.0,
+      "response_preview": "{'agent': 'TAS', 'latency_ms': 54.5, 'model': 'tool', 'provider': 'local', 'response': \"{'error': 'File not found: ../../../etc/passwd'}\", 'tools_used': ['file']}"
+    },
+    {
+      "id": "err_007",
+      "name": "command_injection",
+      "status": "success",
+      "latency_ms": 30.0,
+      "response_preview": "{'agent': 'TAS', 'latency_ms': 7.0, 'model': 'tool', 'provider': 'local', 'response': \"Error: 'this command: ; rm -rf /' not in known apps. Available: calc, calculator, chrome, cmd, command prompt, discord, edge, excel, explorer, file explorer, firefox, google chrome, notepad, paint, powerpoint, pow"
+    },
+    {
+      "id": "err_008",
+      "name": "rapid_fire",
+      "status": "success",
+      "latency_ms": 30315.9,
+      "response_preview": "{'rapid_fire_results': [{'index': 0, 'success': True}, {'index': 1, 'success': True}, {'index': 2, 'success': True}, {'index': 3, 'success': True}, {'index': 4, 'success': True}, {'index': 5, 'success': True}, {'index': 6, 'success': True}, {'index': 7, 'success': True}, {'index': 8, 'success': True"
+    },
+    {
+      "id": "err_009",
+      "name": "concurrent_requests",
+      "status": "success",
+      "latency_ms": 16170.1,
+      "response_preview": "{'concurrent_results': [{'index': 1, 'success': True}, {'index': 0, 'success': True}, {'index': 4, 'success': True}, {'index': 2, 'success': True}, {'index': 3, 'success': True}]}"
+    },
+    {
+      "id": "err_010",
+      "name": "nonexistent_endpoint",
+      "status": "error_handled",
+      "latency_ms": 3.5,
+      "response_preview": "{'error': 'HTTP 404', 'body': '{\"error\":\"Not found\"}\\n'}"
+    }
+  ],
+  "summary": {
+    "total_scenarios": 10,
+    "recovered": 2,
+    "graceful": 8,
+    "crashed": 0,
+    "recovery_rate": 80.0,
+    "crash_rate": 0.0
+  },
+  "elapsed_seconds": 67.45,
+  "status": "completed"
+}

@@ -1,0 +1,14 @@
+{"ts":"2026-09-30T18:16:15Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":0,"phase":"A","step":"INIT","event":"run_started","status":"ok","payload":{"max_iterations":6,"rules":10,"threshold_A":0.8,"threshold_B":0.9}}
+{"ts":"2026-09-30T18:18:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":1,"phase":"A","step":"PLAN","event":"plan_created","status":"ok","payload":{"steps":5,"baseline":{"passed":112,"failed":0}}}
+{"ts":"2026-09-30T18:24:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":1,"phase":"A","step":"PRODUCE","event":"artifact_created","status":"ok","payload":{"bugs_found":4,"bugs_fixed":4,"files_modified":5}}
+{"ts":"2026-09-30T18:25:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":1,"phase":"A","step":"PREPARE","event":"checks_prepared","status":"ok","payload":{"checks":6,"source":"inlined_prepare_agent_empty"}}
+{"ts":"2026-09-30T18:28:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":1,"phase":"A","step":"EVALUATE","event":"evaluation_done","status":"ok","payload":{"score":1.0,"passed":true,"failed":0,"warnings":0}}
+{"ts":"2026-09-30T18:28:01Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":1,"phase":"A->B","step":"EVALUATE","event":"phase_switched","status":"ok","payload":{"from":"A","to":"B","score":1.0}}
+{"ts":"2026-09-30T18:29:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":2,"phase":"B","step":"PLAN","event":"plan_created","status":"ok","payload":{"steps":5}}
+{"ts":"2026-09-30T18:30:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":2,"phase":"B","step":"PREPARE","event":"checks_prepared","status":"ok","payload":{"checks":10,"source":"inlined"}}
+{"ts":"2026-09-30T18:40:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":2,"phase":"B","step":"EVALUATE","event":"evaluation_done","status":"fail","payload":{"score":0.875,"passed":false,"failed":["a.completeness.bug-doc"]}}
+{"ts":"2026-09-30T18:40:10Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":2,"phase":"B","step":"CRITIQUE","event":"critique_done","status":"ok","payload":{"issues":1}}
+{"ts":"2026-09-30T18:44:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":2,"phase":"B","step":"REFINE","event":"refinement_done","status":"ok","payload":{"applied":["bug5-root-cause-label-normalized"]}}
+{"ts":"2026-09-30T18:45:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":3,"phase":"B","step":"PLAN","event":"plan_created","status":"ok","payload":{"steps":1}}
+{"ts":"2026-09-30T18:48:00Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":3,"phase":"B","step":"EVALUATE","event":"evaluation_done","status":"ok","payload":{"score":1.0,"passed":true,"failed":0}}
+{"ts":"2026-09-30T18:48:01Z","run_id":"orbit-bugfix-loop-20260930-181615","iteration":3,"phase":"B","step":"STOP","event":"stopped","status":"ok","payload":{"reason":"quality_gate_passed","score":1.0,"iterations_used":3,"max_iterations":6}}

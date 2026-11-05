@@ -1,0 +1,232 @@
+{
+  "experiment": "Tool Reality Test",
+  "description": "Test complete tool tasks end-to-end",
+  "tasks": [
+    {
+      "id": "tool_001",
+      "name": "file_create_read",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 105.6,
+          "response_preview": "{'success': True, 'path': 'orbit_data\\\\validation_test.txt', 'bytes_written': 39}"
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "File orbit_data\\validation_test.txt exists=True"
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "Content contains 'Hello from validation test': True"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "id": "tool_002",
+      "name": "file_edit",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 26.6,
+          "response_preview": "{'success': True, 'path': 'orbit_data\\\\validation_edit_test.txt', 'bytes_written': 19}"
+        },
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 37.4,
+          "response_preview": "{'success': True, 'path': 'orbit_data\\\\validation_edit_test.txt', 'appended': 6}"
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "Content contains 'Line 2': True"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "id": "tool_003",
+      "name": "system_info",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 611.1,
+          "response_preview": "{'os': 'Windows', 'hostname': 'Priyanshu', 'processor': 'Intel64 Family 6 Model 154 Stepping 3, GenuineIntel', 'os_detail': '{\\n    \"Caption\":  \"Microsoft Windows 11 Home Single Language\",\\n    \"Versi"
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "Matched 2/2 keywords"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "id": "tool_004",
+      "name": "list_processes",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 1216.6,
+          "response_preview": "[\n    {\n        \"Name\":  \"AggregatorHost\",\n        \"Id\":  7884,\n        \"CPU\":  null,\n        \"WorkingSet\":  19730432\n    },\n    {\n        \"Name\":  \"AppActions\",\n        \"Id\":  22576,\n        \"CPU\":  "
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "Response length: 1000"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "id": "tool_005",
+      "name": "list_files",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 24.6,
+          "response_preview": "Files in orbit (44 items):\n  $ORBIT Project Status Report.txt\n  __init__.py\n  __main__.py\n  __pycache__/\n  agentmemory_bp.py\n  agents/\n  assistant.py\n  bot/\n  build.spec\n  config/\n  config.py\n  data/\n"
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "Response length: 475"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "id": "tool_006",
+      "name": "clipboard_operations",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 352.6,
+          "response_preview": "Clipboard set: "
+        },
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 315.8,
+          "response_preview": "Clipboard: 'validation clipboard test'"
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "Matched 2/2 keywords"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "id": "tool_007",
+      "name": "code_generation",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 16511.5,
+          "response_preview": "Sure! Here's the implementation:\n\n```python\n# orbit_data/validation_factorial.py\ndef factorial(n):\n    \"\"\"\n    Calculate the factorial of a non-negative integer.\n    \n    Args:\n        n (int): The nu"
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "File orbit_data\\validation_factorial.py exists=True"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "id": "tool_008",
+      "name": "file_search",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 390.7,
+          "response_preview": "Found 50 files (pattern *.py in orbit):\n  orbit\\agentmemory_bp.py\n  orbit\\assistant.py\n  orbit\\config.py\n  orbit\\emotions.py\n  orbit\\gui.py\n  orbit\\launch_desktop.py\n  orbit\\main.py\n  orbit\\naturo_bp."
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "Response length: 582"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "id": "tool_009",
+      "name": "file_delete",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 22.5,
+          "response_preview": "{'success': True, 'path': 'orbit_data\\\\validation_delete_me.txt', 'bytes_written': 18}"
+        },
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 27.1,
+          "response_preview": "{'success': True, 'deleted': 'orbit_data\\\\validation_delete_me.txt'}"
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "File orbit_data\\validation_delete_me.txt exists=False"
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "id": "tool_010",
+      "name": "multi_step_task",
+      "steps": [
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 20.0,
+          "response_preview": "{'success': True, 'path': 'orbit_data\\\\validation_multi.txt', 'bytes_written': 15}"
+        },
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 22.0,
+          "response_preview": "{'success': True, 'path': 'orbit_data\\\\validation_multi.txt', 'appended': 16}"
+        },
+        {
+          "action": "chat",
+          "success": true,
+          "latency_ms": 17.6,
+          "response_preview": "Step 1: Created\nStep 2: Modified\n"
+        },
+        {
+          "action": "verify",
+          "passed": true,
+          "detail": "Matched 2/2 keywords"
+        }
+      ],
+      "status": "success"
+    }
+  ],
+  "summary": {
+    "total_tasks": 10,
+    "successful_tasks": 10,
+    "task_success_rate": 100.0,
+    "total_steps": 26,
+    "passed_steps": 11,
+    "failed_steps": 0,
+    "step_success_rate": 42.3
+  },
+  "elapsed_seconds": 32.74,
+  "status": "completed"
+}

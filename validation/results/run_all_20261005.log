@@ -1,0 +1,824 @@
+======================================================================
+ORBIT VALIDATION FRAMEWORK
+======================================================================
+Started: 2026-10-05T17:45:53.747274
+ORBIT running: True
+Experiments: 10
+Skipping: none
+
+
+======================================================================
+EXPERIMENT: SmartRouter Value
+======================================================================
+
+============================================================
+EXPERIMENT: SmartRouter Value
+============================================================
+ORBIT running: True
+Ollama running: True
+
+  Task 1/50: gk_001 (general_knowledge)
+    Baseline A: Direct Ollama... score=1.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 2/50: gk_002 (general_knowledge)
+    Baseline A: Direct Ollama... score=1.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 3/50: gk_003 (general_knowledge)
+    Baseline A: Direct Ollama... score=1.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 4/50: gk_004 (general_knowledge)
+    Baseline A: Direct Ollama... score=0.14
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 5/50: gk_005 (general_knowledge)
+    Baseline A: Direct Ollama... score=0.01
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 6/50: gk_006 (general_knowledge)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 7/50: gk_007 (general_knowledge)
+    Baseline A: Direct Ollama... score=1.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 8/50: gk_008 (general_knowledge)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 9/50: gk_009 (general_knowledge)
+    Baseline A: Direct Ollama... score=1.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 10/50: gk_010 (general_knowledge)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 11/50: gk_011 (general_knowledge)
+    Baseline A: Direct Ollama... score=1.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 12/50: gk_012 (general_knowledge)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.33 agent=QUEEN
+
+  Task 13/50: gk_013 (general_knowledge)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 14/50: gk_014 (general_knowledge)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 15/50: reason_001 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 16/50: reason_002 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 17/50: reason_003 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 18/50: reason_004 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.50 agent=QUEEN
+
+  Task 19/50: reason_005 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 20/50: reason_006 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 21/50: reason_007 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.40 agent=QUEEN
+
+  Task 22/50: reason_008 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.67 agent=QUEEN
+
+  Task 23/50: reason_009 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.33 agent=QUEEN
+
+  Task 24/50: reason_010 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 25/50: reason_011 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 26/50: reason_012 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 27/50: reason_017 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 28/50: reason_018 (reasoning)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 29/50: math_001 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.04 agent=QUEEN
+
+  Task 30/50: math_002 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 31/50: math_003 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 32/50: math_004 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 33/50: math_005 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 34/50: math_006 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.01 agent=QUEEN
+
+  Task 35/50: math_007 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.42 agent=QUEEN
+
+  Task 36/50: math_008 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 37/50: math_009 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.18 agent=QUEEN
+
+  Task 38/50: math_010 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 39/50: math_011 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.33 agent=QUEEN
+
+  Task 40/50: math_012 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.92 agent=QUEEN
+
+  Task 41/50: math_016 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 42/50: math_018 (mathematics)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 43/50: code_001 (coding)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... ERROR: timed out
+
+  Task 44/50: code_002 (coding)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 45/50: code_003 (coding)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 46/50: code_004 (coding)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=TAS
+
+  Task 47/50: code_005 (coding)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... ERROR: timed out
+
+  Task 48/50: code_006 (coding)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=1.00 agent=QUEEN
+
+  Task 49/50: code_007 (coding)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+
+  Task 50/50: code_008 (coding)
+    Baseline A: Direct Ollama... score=0.00
+    Baseline C: ORBIT pipeline... score=0.00 agent=QUEEN
+  Completed in 680.9s
+  Saved to D:\JARVES\validation\results\smartrouter_value.json
+
+  Completed in 680.9s
+
+
+======================================================================
+EXPERIMENT: Queen / Multi-Agent Value
+======================================================================
+
+  FAILED: name 'Dict' is not defined
+
+
+======================================================================
+EXPERIMENT: Memory Effectiveness
+======================================================================
+
+============================================================
+EXPERIMENT: Memory Effectiveness
+============================================================
+
+  Test: basic_recall (mem_001)
+    Baseline: Direct Ollama... score=0.00 wrong=0
+    ORBIT pipeline... score=1.00 wrong=0
+
+  Test: multi_fact_recall (mem_002)
+    Baseline: Direct Ollama... score=0.00 wrong=0
+    ORBIT pipeline... score=0.00 wrong=0
+
+  Test: contradiction_handling (mem_003)
+    Baseline: Direct Ollama... score=0.00 wrong=0
+    ORBIT pipeline... score=1.00 wrong=0
+
+  Test: indirect_recall (mem_004)
+    Baseline: Direct Ollama... score=0.00 wrong=0
+    ORBIT pipeline... score=1.00 wrong=0
+
+  Test: irrelevant_memory_injection (mem_005)
+    Baseline: Direct Ollama... score=0.00 wrong=0
+    ORBIT pipeline... score=0.00 wrong=0
+
+  Test: sequential_dependency (mem_006)
+    Baseline: Direct Ollama... score=0.00 wrong=0
+    ORBIT pipeline... score=0.00 wrong=0
+
+  Test: preference_learning (mem_007)
+    Baseline: Direct Ollama... score=0.00 wrong=0
+    ORBIT pipeline... score=0.50 wrong=0
+
+  Test: numerical_memory (mem_008)
+    Baseline: Direct Ollama... score=1.00 wrong=0
+    ORBIT pipeline... score=1.00 wrong=0
+  Completed in 309.1s
+  Saved to D:\JARVES\validation\results\memory_effectiveness.json
+
+  Completed in 309.1s
+
+
+======================================================================
+EXPERIMENT: Learning Effectiveness
+======================================================================
+
+============================================================
+EXPERIMENT: Learning Effectiveness
+============================================================
+
+  Test: preference_learning
+    ORBIT... PASS (8163ms)
+
+  Test: context_retention
+    ORBIT... PASS (2975ms)
+
+  Test: correction_handling
+    ORBIT... PASS (3287ms)
+
+  Test: multi_turn_coherence
+    ORBIT... PASS (2443ms)
+
+  Test: fact_correction
+    ORBIT... PASS (11781ms)
+
+  Test: domain_knowledge
+    ORBIT... PASS (3133ms)
+
+  Test: instruction_following
+    ORBIT...  FAILED: 'charmap' codec can't encode character '\U0001f4cb' in position 32: character maps to <undefined>
+  Saved to D:\JARVES\validation\results\learning_effectiveness.json
+
+  Completed in 37.9s
+
+
+======================================================================
+EXPERIMENT: Error Recovery
+======================================================================
+
+============================================================
+EXPERIMENT: Error Recovery
+============================================================
+
+  Scenario: empty_message
+    Send empty message to chat API
+    Status: error_handled (18ms)
+
+  Scenario: very_long_message
+    Send extremely long message (10K chars)
+    Status: success (13605ms)
+
+  Scenario: special_characters
+    Send message with special characters
+    Status: success (2802ms)
+
+  Scenario: unicode_injection
+    Send message with Unicode injection attempts
+    Status: success (2122ms)
+
+  Scenario: sql_injection
+    Send SQL injection attempt
+    Status: success (2310ms)
+
+  Scenario: path_traversal
+    Send path traversal attempt
+    Status: success (77ms)
+
+  Scenario: command_injection
+    Send command injection attempt
+    Status: success (30ms)
+
+  Scenario: rapid_fire
+    Send 10 messages rapidly
+    Status: success (30316ms)
+
+  Scenario: concurrent_requests
+    Send 5 concurrent requests
+    Status: success (16170ms)
+
+  Scenario: nonexistent_endpoint
+    Hit nonexistent API endpoint
+    Status: error_handled (4ms)
+  Completed in 67.5s
+  Saved to D:\JARVES\validation\results\error_recovery.json
+
+  Completed in 67.5s
+
+
+======================================================================
+EXPERIMENT: Tool Reality Test
+======================================================================
+
+============================================================
+EXPERIMENT: Tool Reality Test
+============================================================
+
+  Task: file_create_read
+    Chat: Create a file called orbit_data/validation_test.txt with the... OK (25ms)
+    Verify: file_exists... PASS
+    Verify: file_contains... PASS
+
+  Task: file_edit
+    Chat: Create a file called orbit_data/validation_edit_test.txt wit... OK (24ms)
+    Chat: Append 'Line 2' to the file orbit_data/validation_edit_test.... OK (26ms)
+    Verify: file_contains... FAIL: Content contains 'Line 2': False
+
+  Task: system_info
+    Chat: Tell me the system information including OS and memory... OK (3307ms)
+    Verify: response_contains... FAIL: Matched 1/2 keywords
+
+  Task: list_processes
+    Chat: List the running processes... OK (647ms)
+    Verify: response_not_empty... PASS
+
+  Task: list_files
+    Chat: List the files in the orbit directory... OK (11ms)
+    Verify: response_not_empty... PASS
+
+  Task: clipboard_operations
+    Chat: Copy the text 'validation clipboard test' to the clipboard... OK (38ms)
+    Chat: What is currently in the clipboard?... OK (51ms)
+    Verify: response_contains... FAIL: Matched 0/2 keywords
+
+  Task: code_generation
+    Chat: Write a Python function that calculates factorial and save i... OK (122ms)
+    Verify: file_exists... FAIL: File orbit_data\validation_factorial.py exists=False
+
+  Task: file_search
+    Chat: Search for Python files in the orbit directory... OK (27ms)
+    Verify: response_not_empty... PASS
+
+  Task: file_delete
+    Chat: Create a file called orbit_data/validation_delete_me.txt wit... OK (27ms)
+    Chat: Delete the file orbit_data/validation_delete_me.txt... OK (9ms)
+    Verify: file_not_exists... FAIL: File orbit_data\validation_delete_me.txt exists=True
+
+  Task: multi_step_task
+    Chat: Create orbit_data/validation_multi.txt with 'Step 1: Created... OK (26ms)
+    Chat: Add 'Step 2: Modified' to orbit_data/validation_multi.txt... OK (3209ms)
+    Chat: Read orbit_data/validation_multi.txt and tell me what it con... OK (4743ms)
+    Verify: response_contains... FAIL: Matched 0/2 keywords
+  Completed in 25.4s
+  Saved to D:\JARVES\validation\results\tool_reality_test.json
+
+  Completed in 25.4s
+
+
+======================================================================
+EXPERIMENT: Concurrency Stress Test
+======================================================================
+
+============================================================
+EXPERIMENT: Concurrency Stress Test
+============================================================
+
+  === 5 threads ===
+    API health (5 threads)... success=95.9% calls=219
+    Chat (5 threads)... success=100.0% calls=5
+    File ops (5 threads)...  FAILED: No module named 'orbit.orbit'
+  Saved to D:\JARVES\validation\results\concurrency_stress_test.json
+
+  Completed in 15.7s
+
+
+======================================================================
+EXPERIMENT: Quality Gate
+======================================================================
+
+============================================================
+EXPERIMENT: Quality Gate
+============================================================
+
+  Task: qg_001 (short_answer)
+    Direct Ollama... words=28 score=0.70
+    ORBIT (gate ON)... words=14 score=0.70
+
+  Task: qg_002 (code_generation)
+    Direct Ollama... words=47 score=0.90
+    ORBIT (gate ON)... words=22 score=0.90
+
+  Task: qg_003 (explanation)
+    Direct Ollama... words=0 score=0.00
+    ORBIT (gate ON)... words=52 score=0.70
+
+  Task: qg_004 (analysis)
+    Direct Ollama... words=0 score=0.00
+    ORBIT (gate ON)... words=37 score=0.70
+
+  Task: qg_005 (debugging)
+    Direct Ollama... words=4 score=0.30
+    ORBIT (gate ON)... words=77 score=0.70
+
+  Task: qg_006 (creative)
+    Direct Ollama... words=0 score=0.00
+    ORBIT (gate ON)... words=39 score=0.70
+
+  Task: qg_007 (factual)
+    Direct Ollama... words=0 score=0.00
+    ORBIT (gate ON)... words=18 score=0.70
+
+  Task: qg_008 (structured)
+    Direct Ollama... words=55 score=0.80
+    ORBIT (gate ON)... words=43 score=0.80
+
+  Task: qg_009 (conversion)
+    Direct Ollama... words=0 score=0.00
+    ORBIT (gate ON)... words=22 score=0.70
+
+  Task: qg_010 (comparison)
+    Direct Ollama... words=0 score=0.00
+    ORBIT (gate ON)... words=18 score=0.70
+  Completed in 74.4s
+  Saved to D:\JARVES\validation\results\quality_gate.json
+
+  Completed in 74.4s
+
+
+======================================================================
+EXPERIMENT: Full Pipeline Value
+======================================================================
+
+============================================================
+EXPERIMENT: Full Pipeline Value
+============================================================
+
+  Task 1/60: gk_001 (general_knowledge)
+    Direct... score=0.00 5542ms
+    ORBIT... score=1.00 2315ms agent=QUEEN
+
+  Task 2/60: gk_002 (general_knowledge)
+    Direct... score=1.00 3734ms
+    ORBIT... score=1.00 2853ms agent=QUEEN
+
+  Task 3/60: gk_003 (general_knowledge)
+    Direct... score=1.00 5013ms
+    ORBIT... score=1.00 2344ms agent=QUEEN
+
+  Task 4/60: gk_004 (general_knowledge)
+    Direct... score=0.14 4977ms
+    ORBIT... score=0.00 4441ms agent=QUEEN
+
+  Task 5/60: gk_005 (general_knowledge)
+    Direct... score=1.00 3261ms
+    ORBIT... score=1.00 3007ms agent=QUEEN
+
+  Task 6/60: gk_006 (general_knowledge)
+    Direct... score=0.00 4884ms
+    ORBIT... score=1.00 3046ms agent=QUEEN
+
+  Task 7/60: gk_007 (general_knowledge)
+    Direct... score=1.00 5001ms
+    ORBIT... score=1.00 3082ms agent=QUEEN
+
+  Task 8/60: gk_008 (general_knowledge)
+    Direct... score=0.00 4847ms
+    ORBIT... score=0.00 2732ms agent=QUEEN
+
+  Task 9/60: gk_009 (general_knowledge)
+    Direct... score=1.00 4938ms
+    ORBIT... score=1.00 3656ms agent=QUEEN
+
+  Task 10/60: gk_010 (general_knowledge)
+    Direct... score=0.00 4963ms
+    ORBIT... score=1.00 1883ms agent=QUEEN
+
+  Task 11/60: gk_011 (general_knowledge)
+    Direct... score=1.00 1997ms
+    ORBIT... score=1.00 2695ms agent=QUEEN
+
+  Task 12/60: gk_012 (general_knowledge)
+    Direct... score=0.00 4852ms
+    ORBIT... score=0.33 2113ms agent=QUEEN
+
+  Task 13/60: gk_013 (general_knowledge)
+    Direct... score=0.00 4879ms
+    ORBIT... score=1.00 2515ms agent=QUEEN
+
+  Task 14/60: gk_014 (general_knowledge)
+    Direct... score=0.00 4926ms
+    ORBIT... score=1.00 3003ms agent=QUEEN
+
+  Task 15/60: reason_001 (reasoning)
+    Direct... score=0.00 4946ms
+    ORBIT... score=1.00 5748ms agent=QUEEN
+
+  Task 16/60: reason_002 (reasoning)
+    Direct... score=0.00 4868ms
+    ORBIT... score=1.00 6506ms agent=QUEEN
+
+  Task 17/60: reason_003 (reasoning)
+    Direct... score=0.00 5029ms
+    ORBIT... score=1.00 5179ms agent=QUEEN
+
+  Task 18/60: reason_004 (reasoning)
+    Direct... score=0.00 5083ms
+    ORBIT... score=0.50 4915ms agent=QUEEN
+
+  Task 19/60: reason_005 (reasoning)
+    Direct... score=0.00 4976ms
+    ORBIT... score=0.00 36022ms agent=QUEEN
+
+  Task 20/60: reason_006 (reasoning)
+    Direct... score=0.00 5184ms
+    ORBIT... score=0.00 6014ms agent=QUEEN
+
+  Task 21/60: reason_007 (reasoning)
+    Direct... score=0.00 4954ms
+    ORBIT... score=0.40 7015ms agent=QUEEN
+
+  Task 22/60: reason_008 (reasoning)
+    Direct... score=0.00 4920ms
+    ORBIT... score=0.33 9575ms agent=QUEEN
+
+  Task 23/60: reason_009 (reasoning)
+    Direct... score=0.00 4901ms
+    ORBIT... score=1.00 13190ms agent=QUEEN
+
+  Task 24/60: reason_010 (reasoning)
+    Direct... score=0.00 4987ms
+    ORBIT... score=0.00 1736ms agent=QUEEN
+
+  Task 25/60: reason_011 (reasoning)
+    Direct... score=0.00 4852ms
+    ORBIT... score=1.00 2643ms agent=QUEEN
+
+  Task 26/60: reason_012 (reasoning)
+    Direct... score=0.00 4873ms
+    ORBIT... score=1.00 2750ms agent=QUEEN
+
+  Task 27/60: reason_017 (reasoning)
+    Direct... score=0.00 4870ms
+    ORBIT... score=1.00 3647ms agent=QUEEN
+
+  Task 28/60: reason_018 (reasoning)
+    Direct... score=0.00 4883ms
+    ORBIT... score=1.00 5493ms agent=QUEEN
+
+  Task 29/60: math_001 (mathematics)
+    Direct... score=0.00 4913ms
+    ORBIT... score=0.04 2439ms agent=QUEEN
+
+  Task 30/60: math_002 (mathematics)
+    Direct... score=0.00 4848ms
+    ORBIT... score=1.00 2912ms agent=QUEEN
+
+  Task 31/60: math_003 (mathematics)
+    Direct... score=0.00 4862ms
+    ORBIT... score=1.00 2625ms agent=QUEEN
+
+  Task 32/60: math_004 (mathematics)
+    Direct... score=0.00 4836ms
+    ORBIT... score=0.00 2643ms agent=QUEEN
+
+  Task 33/60: math_005 (mathematics)
+    Direct... score=0.00 4843ms
+    ORBIT... score=1.00 3554ms agent=QUEEN
+
+  Task 34/60: math_006 (mathematics)
+    Direct... score=0.00 4871ms
+    ORBIT... score=0.05 2922ms agent=QUEEN
+
+  Task 35/60: math_007 (mathematics)
+    Direct... score=0.00 4853ms
+    ORBIT... score=0.42 4482ms agent=QUEEN
+
+  Task 36/60: math_008 (mathematics)
+    Direct... score=0.00 4876ms
+    ORBIT... score=1.00 2362ms agent=QUEEN
+
+  Task 37/60: math_009 (mathematics)
+    Direct... score=0.00 4827ms
+    ORBIT... score=0.18 3702ms agent=QUEEN
+
+  Task 38/60: math_010 (mathematics)
+    Direct... score=0.00 4844ms
+    ORBIT... score=1.00 3429ms agent=QUEEN
+
+  Task 39/60: math_011 (mathematics)
+    Direct... score=0.00 4834ms
+    ORBIT... score=0.33 2263ms agent=QUEEN
+
+  Task 40/60: math_012 (mathematics)
+    Direct... score=0.00 4838ms
+    ORBIT... score=1.00 3808ms agent=QUEEN
+
+  Task 41/60: math_016 (mathematics)
+    Direct... score=0.00 4873ms
+    ORBIT... score=0.00 2777ms agent=QUEEN
+
+  Task 42/60: math_018 (mathematics)
+    Direct... score=0.00 4832ms
+    ORBIT... score=1.00 3814ms agent=QUEEN
+
+  Task 43/60: code_001 (coding)
+    Direct... score=0.00 4857ms
+    ORBIT... score=0.00 4167ms agent=QUEEN
+
+  Task 44/60: code_002 (coding)
+    Direct... score=0.00 4890ms
+    ORBIT... score=0.00 8444ms agent=QUEEN
+
+  Task 45/60: code_003 (coding)
+    Direct... score=0.00 4911ms
+    ORBIT... score=0.00 7719ms agent=QUEEN
+
+  Task 46/60: code_004 (coding)
+    Direct... score=0.00 4860ms
+    ORBIT... score=0.00 46ms agent=TAS
+
+  Task 47/60: code_005 (coding)
+    Direct... score=0.00 4841ms
+    ORBIT... score=0.00 8769ms agent=QUEEN
+
+  Task 48/60: code_006 (coding)
+    Direct... score=0.00 4880ms
+    ORBIT... score=1.00 3510ms agent=QUEEN
+
+  Task 49/60: code_007 (coding)
+    Direct... score=0.00 4845ms
+    ORBIT... score=0.00 4847ms agent=QUEEN
+
+  Task 50/60: code_008 (coding)
+    Direct... score=0.00 4860ms
+    ORBIT... score=0.00 12529ms agent=QUEEN
+
+  Task 51/60: code_011 (coding)
+    Direct... score=0.00 4961ms
+    ORBIT... score=0.00 41ms agent=TAS
+
+  Task 52/60: code_012 (coding)
+    Direct... score=0.00 4858ms
+    ORBIT... score=0.00 21ms agent=TAS
+
+  Task 53/60: code_014 (coding)
+    Direct... score=0.00 4884ms
+    ORBIT... ERROR: timed out
+
+  Task 54/60: code_015 (coding)
+    Direct... score=0.00 30002ms
+    ORBIT... score=0.50 33439ms agent=QUEEN
+
+  Task 55/60: code_017 (coding)
+    Direct... score=0.00 4800ms
+    ORBIT... score=0.00 56701ms agent=QUEEN
+
+  Task 56/60: code_018 (coding)
+    Direct... score=0.00 4927ms
+    ORBIT... score=0.00 19406ms agent=QUEEN
+
+  Task 57/60: res_001 (research)
+    Direct... score=0.67 4860ms
+    ORBIT... score=0.67 5964ms agent=QUEEN
+
+  Task 58/60: res_002 (research)
+    Direct... score=0.00 4785ms
+    ORBIT... score=0.50 3567ms agent=QUEEN
+
+  Task 59/60: res_003 (research)
+    Direct... score=0.00 4785ms
+    ORBIT... score=1.00 3219ms agent=QUEEN
+
+  Task 60/60: res_004 (research)
+    Direct... score=0.00 4778ms
+    ORBIT... score=0.25 2655ms agent=QUEEN
+  Completed in 772.8s
+  Saved to D:\JARVES\validation\results\full_pipeline_value.json
+
+  Completed in 772.8s
+
+
+======================================================================
+EXPERIMENT: Real-World Task Suite
+======================================================================
+
+============================================================
+EXPERIMENT: Real-World Task Suite
+============================================================
+
+  Task: rw_001 (file_management)
+    Direct... 4842ms
+    ORBIT... 25ms agent=TAS
+
+  Task: rw_002 (code_generation)
+    Direct... 4874ms
+    ORBIT... 7893ms agent=QUEEN
+
+  Task: rw_003 (debugging)
+    Direct... 4947ms
+    ORBIT... 2222ms agent=QUEEN
+
+  Task: rw_004 (research)
+    Direct... 5024ms
+    ORBIT... 5230ms agent=QUEEN
+
+  Task: rw_005 (system_info)
+    Direct... 4838ms
+    ORBIT... 2200ms agent=QUEEN
+
+  Task: rw_006 (creative)
+    Direct... 3720ms
+    ORBIT... 3397ms agent=QUEEN
+
+  Task: rw_007 (planning)
+    Direct... 4957ms
+    ORBIT... 4309ms agent=QUEEN
+
+  Task: rw_008 (file_operations)
+    Direct... 4957ms
+    ORBIT... 69ms agent=TAS
+
+  Task: rw_009 (code_generation)
+    Direct... 4948ms
+    ORBIT... 136ms agent=TAS
+
+  Task: rw_010 (explanation)
+    Direct... 4826ms
+    ORBIT... 3588ms agent=QUEEN
+
+  Task: rw_011 (file_management)
+    Direct... 4420ms
+    ORBIT... 404ms agent=TAS
+
+  Task: rw_012 (system_info)
+    Direct... 4871ms
+    ORBIT... 3809ms agent=TAS
+  Completed in 96.6s
+  Saved to D:\JARVES\validation\results\real-world_task_suite.json
+
+  Completed in 96.6s
+
+
+======================================================================
+ALL EXPERIMENTS COMPLETE
+======================================================================
+Results saved: D:\JARVES\validation\results\all_results.json
+Completed: 2026-10-05T18:20:34.236960
+
+======================================================================
+SUMMARY
+======================================================================
+  SmartRouter Value: ?
+  Queen / Multi-Agent Value: FAILED - name 'Dict' is not defined
+  Memory Effectiveness: 0.562
+  Learning Effectiveness: FAILED - 'charmap' codec can't encode character '\U0001f4cb' in position 32: character ma
+  Error Recovery: ?
+  Tool Reality Test: ?
+  Concurrency Stress Test: FAILED - No module named 'orbit.orbit'
+  Quality Gate: ?
+  Full Pipeline Value: 0.542
+  Real-World Task Suite: 0.653

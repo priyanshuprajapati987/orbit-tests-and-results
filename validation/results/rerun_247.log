@@ -1,0 +1,110 @@
+
+=== RERUN: Queen / Multi-Agent Value ===
+
+============================================================
+EXPERIMENT: Queen / Multi-Agent Value
+============================================================
+
+  Task: ma_001 (research)
+    Direct... score=1.00
+    ORBIT... score=1.00
+
+  Task: ma_002 (code_explain)
+    Direct... score=0.25
+    ORBIT... score=1.00
+
+  Task: ma_003 (analysis)
+    Direct... score=0.25
+    ORBIT... score=1.00
+
+  Task: ma_004 (planning)
+    Direct... score=0.25
+    ORBIT... score=1.00
+
+  Task: ma_005 (debugging)
+    Direct... score=1.00
+    ORBIT... score=1.00
+
+  Task: ma_006 (testing)
+    Direct... score=0.25
+    ORBIT... score=0.60
+
+  Task: ma_007 (explanation)
+    Direct... score=0.25
+    ORBIT... score=1.00
+
+  Task: ma_008 (design)
+    Direct... score=0.25
+    ORBIT... score=0.90
+
+  Task: ma_009 (security)
+    Direct... score=0.25
+    ORBIT... score=1.00
+
+  Task: ma_010 (code_generation)
+    Direct... score=0.25
+    ORBIT... score=0.70
+  Completed in 80.5s
+  Saved to D:\JARVES\validation\results\queen___multi-agent_value.json
+  status=completed elapsed=80.5s
+  saved -> D:\JARVES\validation\results\all_results.json
+
+=== RERUN: Learning Effectiveness ===
+
+============================================================
+EXPERIMENT: Learning Effectiveness
+============================================================
+
+  Test: preference_learning
+    ORBIT... PASS (644ms)
+
+  Test: context_retention
+    ORBIT... PASS (532ms)
+
+  Test: correction_handling
+    ORBIT... PASS (476ms)
+
+  Test: multi_turn_coherence
+    ORBIT... PASS (514ms)
+
+  Test: fact_correction
+    ORBIT... PASS (2264ms)
+
+  Test: domain_knowledge
+    ORBIT... PASS (432ms)
+
+  Test: instruction_following
+    ORBIT... FAIL (163ms) expected='1.' got='📋 5 item(s) **shopping** mein add! 'user: When I ask for a always use numbered items not bullet poin'
+
+  Test: context_switching
+    ORBIT... PASS (959ms)
+  Completed in 14.0s
+  Saved to D:\JARVES\validation\results\learning_effectiveness.json
+  status=completed elapsed=14.0s
+  saved -> D:\JARVES\validation\results\all_results.json
+
+=== RERUN: Concurrency Stress Test ===
+
+============================================================
+EXPERIMENT: Concurrency Stress Test
+============================================================
+
+  === 5 threads ===
+    API health (5 threads)... success=97.7% calls=215
+    Chat (5 threads)... success=100.0% calls=5
+    File ops (5 threads)... success=80.0% corrupted=1
+
+  === 10 threads ===
+    API health (10 threads)... success=26.8% calls=422
+    Chat (10 threads)...reads)... success=100.0% calls=10
+    File ops (10 threads)... success=100.0% corrupted=0
+
+  === 20 threads ===
+    API health (20 threads)... success=24.8% calls=846
+    File ops (20 threads)... success=100.0% corrupted=0
+  Completed in 44.7s
+  Saved to D:\JARVES\validation\results\concurrency_stress_test.json
+  status=completed elapsed=44.7s
+  saved -> D:\JARVES\validation\results\all_results.json
+
+RERUN BATCH COMPLETE
