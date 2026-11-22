@@ -26,16 +26,16 @@ the recorded results actually were.
 
 | Suite | Passed | Failed | Skipped | Evidence file |
 |-------|--------|--------|---------|---------------|
-| **ORBIT full suite** | **4,494** | **0** | 27 | `results/full_suite_junit.xml` + `results/full_suite_run.log` |
+| **ORBIT full suite** | **10,440** | **0** | 23 | `results/full_suite_junit.xml` + `results/full_suite_run.log` |
 | ORBIT fast-lane (smoke) | 52 | 0 | 0 | `results/fast_lane_junit.xml` |
 | agentverse-hub (ecosystem) | 173 | 0 | 0 | `results/agentverse_hub_junit.xml` |
 | omnicheat-pro (ecosystem) | 135 | 0 | 0 | `results/omnicheat_pro_junit.xml` |
-| **Line coverage (core)** | **54%** (39,874 / 86,984 stmts) | — | — | `results/coverage.xml` |
+| **Line coverage (core)** | **68%** (59,884 / 87,534 stmts) | — | — | `results/coverage.xml` |
 
-> **Zero code failures.** The 27 skipped tests are *environment-gated* (see below),
+> **Zero code failures.** The 23 skipped tests are *environment-gated* (see below),
 > not hidden failures.
 
-### ⏭️ Why 27 tests skip (by design)
+### ⏭️ Why 23 tests skip (by design)
 
 These tests need external services that are intentionally not running on a
 developer machine. They are **wired to start** via `docker-compose.yml`
@@ -58,7 +58,7 @@ Run `docker compose up -d` on the source repo and they execute instead of skippi
 | `results/fast_lane_junit.xml` | Smoke-suite results (battle runner + phase audit/orchestrator) |
 | `results/agentverse_hub_junit.xml` | agentverse-hub backend suite |
 | `results/omnicheat_pro_junit.xml` | omnicheat-pro backend suite |
-| `results/coverage.xml` | Coverage.py XML report (54% line coverage) |
+| `results/coverage.xml` | Coverage.py XML report (68% line coverage) |
 | `validation/results/*.json` | Raw output of 15 validation experiments (memory, learning, concurrency, quality-gate, multi-agent value, error-recovery, full-pipeline …) |
 | `validation/results/*.log` | Full run logs of the validation harness |
 | `validation/claim_verification_table.md` | Every product claim → verification status |
@@ -127,4 +127,4 @@ are its test-suite. This repo carries the tests + recorded evidence only.
 
 ---
 
-*Last updated: 2026-11-05 — full suite: 4,494 passed / 0 failed / 27 env-skipped.*
+*Last updated: 2026-11-22 — full suite: 10,440 passed / 0 failed / 23 env-skipped (19m38s, coverage 68%).*
