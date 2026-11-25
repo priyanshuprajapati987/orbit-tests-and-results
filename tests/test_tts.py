@@ -128,6 +128,9 @@ class TestPyttsx3AndVoices(TtsBase):
         self.assertIs(tts_mod._get_pyttsx3(), fake)
 
     def test_init_success_caches_engine(self):
+        # full-suite isolation: an earlier test file may have warmed the
+        # real pyttsx3 engine into the cache — start from a clean slate
+        tts_mod._pyttsx3_engine = None
         engine = MagicMock(name="pyttsx3-engine")
         with patch.dict(sys.modules, {"pyttsx3": self._fake_pyttsx3(engine)}):
             got = tts_mod._get_pyttsx3()

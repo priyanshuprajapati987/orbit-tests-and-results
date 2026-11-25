@@ -51,6 +51,7 @@ class _FakeKillSwitch:
 # Patch the kill switch module before any MCP code uses it
 import orbit.orbit.core.kill_switch as _ks_mod
 
+_orig_get_kill_switch = _ks_mod.get_kill_switch
 _ks_mod._kill_switch = _FakeKillSwitch()
 _ks_mod.get_kill_switch = lambda: _ks_mod._kill_switch
 
@@ -63,6 +64,19 @@ def _safe_check_policy(self, tool_name, args):
 
 
 ORBITMCPServer._check_policy = _safe_check_policy
+
+
+def teardown_module():
+    """Undo the module-level monkeypatches (run at import/collection time).
+
+    Without this, every later test file sees the always-None
+    ``_check_policy`` and the fake kill switch — ``test_mcp_tool_deep``'s
+    policy tests failed in the full-suite run because of this leak.
+    """
+    ORBITMCPServer._check_policy = _orig_check_policy
+    _ks_mod.get_kill_switch = _orig_get_kill_switch
+    if hasattr(_ks_mod, "_kill_switch"):
+        del _ks_mod._kill_switch
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
