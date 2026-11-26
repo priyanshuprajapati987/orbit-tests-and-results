@@ -26,19 +26,19 @@ the recorded results actually were.
 
 | Suite | Passed | Failed | Skipped | Evidence file |
 |-------|--------|--------|---------|---------------|
-| **ORBIT full suite** | **11,812** | **12** | 27 | `results/full_suite_junit.xml` + `results/full_suite_run.log` |
+| **ORBIT full suite** | **11,825** | **1** (env-flaky) | 23 | `results/full_suite_junit.xml` + `results/full_suite_run.log` |
 | ORBIT fast-lane (smoke) | 52 | 0 | 0 | `results/fast_lane_junit.xml` |
 | agentverse-hub (ecosystem) | 173 | 0 | 0 | `results/agentverse_hub_junit.xml` |
 | omnicheat-pro (ecosystem) | 135 | 0 | 0 | `results/omnicheat_pro_junit.xml` |
-| **Line coverage (core)** | **73%** (63,872 / 87,825 stmts) | — | — | `results/coverage.xml` |
+| **Line coverage (core)** | **73%** (63,951 / 87,805 stmts) | — | — | `results/coverage.xml` |
 
-> **12 failures in this run** come from in-progress (uncommitted) source changes
-> (`mcp_tool.py` allowlist gate + `remote_skill_marketplace.py` supply-chain
-> validation) conflicting with existing tests — not from the committed test
-> suite. See `results/full_suite_run.log` for details. The 27 skipped tests are
-> *environment-gated* (see below), not hidden failures.
+> **1 flaky failure** in this run (`test_pending_claims.py::TestNoResourceLeaks::
+> test_bounded_structures_churn_no_rss_leak`) is an *environmental* RSS
+> measurement that exceeded its 30 MB threshold by 3 MB — the structural
+> invariants all passed and the test passed on immediate retry. Not a code
+> bug. The 23 skipped tests are *environment-gated* (see below).
 
-### ⏭️ Why 27 tests skip (by design)
+### ⏭️ Why 23 tests skip (by design)
 
 These tests need external services that are intentionally not running on a
 developer machine. They are **wired to start** via `docker-compose.yml`
@@ -130,4 +130,4 @@ are its test-suite. This repo carries the tests + recorded evidence only.
 
 ---
 
-*Last updated: 2026-11-26 — full suite: 11,812 passed / 12 failed / 27 env-skipped (26m18s, coverage 73%). 12 failures from in-progress (uncommitted) source changes; see results/full_suite_run.log.*
+*Last updated: 2026-11-26 — full suite: 11,825 passed / 1 env-flaky / 23 env-skipped (35m23s, coverage 73%). Single failure is environmental RSS noise (retried green); see results/full_suite_run.log.*
