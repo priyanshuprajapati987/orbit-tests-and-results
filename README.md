@@ -26,14 +26,17 @@ the recorded results actually were.
 
 | Suite | Passed | Failed | Skipped | Evidence file |
 |-------|--------|--------|---------|---------------|
-| **ORBIT full suite** | **11,662** | **0** | 27 | `results/full_suite_junit.xml` + `results/full_suite_run.log` |
+| **ORBIT full suite** | **11,812** | **12** | 27 | `results/full_suite_junit.xml` + `results/full_suite_run.log` |
 | ORBIT fast-lane (smoke) | 52 | 0 | 0 | `results/fast_lane_junit.xml` |
 | agentverse-hub (ecosystem) | 173 | 0 | 0 | `results/agentverse_hub_junit.xml` |
 | omnicheat-pro (ecosystem) | 135 | 0 | 0 | `results/omnicheat_pro_junit.xml` |
-| **Line coverage (core)** | **72%** (63,317 / 87,545 stmts) | — | — | `results/coverage.xml` |
+| **Line coverage (core)** | **73%** (63,872 / 87,825 stmts) | — | — | `results/coverage.xml` |
 
-> **Zero code failures.** The 27 skipped tests are *environment-gated* (see below),
-> not hidden failures.
+> **12 failures in this run** come from in-progress (uncommitted) source changes
+> (`mcp_tool.py` allowlist gate + `remote_skill_marketplace.py` supply-chain
+> validation) conflicting with existing tests — not from the committed test
+> suite. See `results/full_suite_run.log` for details. The 27 skipped tests are
+> *environment-gated* (see below), not hidden failures.
 
 ### ⏭️ Why 27 tests skip (by design)
 
@@ -58,7 +61,7 @@ Run `docker compose up -d` on the source repo and they execute instead of skippi
 | `results/fast_lane_junit.xml` | Smoke-suite results (battle runner + phase audit/orchestrator) |
 | `results/agentverse_hub_junit.xml` | agentverse-hub backend suite |
 | `results/omnicheat_pro_junit.xml` | omnicheat-pro backend suite |
-| `results/coverage.xml` | Coverage.py XML report (72% line coverage) |
+| `results/coverage.xml` | Coverage.py XML report (73% line coverage) |
 | `validation/results/*.json` | Raw output of 15 validation experiments (memory, learning, concurrency, quality-gate, multi-agent value, error-recovery, full-pipeline …) |
 | `validation/results/*.log` | Full run logs of the validation harness |
 | `validation/claim_verification_table.md` | Every product claim → verification status |
@@ -127,4 +130,4 @@ are its test-suite. This repo carries the tests + recorded evidence only.
 
 ---
 
-*Last updated: 2026-11-25 — full suite: 11,662 passed / 0 failed / 27 env-skipped (17m50s, coverage 72%).*
+*Last updated: 2026-11-26 — full suite: 11,812 passed / 12 failed / 27 env-skipped (26m18s, coverage 73%). 12 failures from in-progress (uncommitted) source changes; see results/full_suite_run.log.*
