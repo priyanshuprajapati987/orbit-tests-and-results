@@ -14,7 +14,7 @@ the recorded results actually were.
 
 | Path | What it is | Count |
 |------|------------|-------|
-| `tests/` | Full pytest test-suite of the ORBIT platform | **590 files / 13,830 tests** |
+| `tests/` | Full pytest test-suite of the ORBIT platform | **591 files / 13,878 tests** |
 | `results/` | Machine-readable run evidence (JUnit XML, logs, coverage) | see [Evidence index](#-evidence-index) |
 | `validation/` | 15 experiment scripts + their raw result JSONs/logs | 20 result artifacts |
 | `.ai-factory/` | QA reports, evolution logs, patch history, plans | 49 documents |
